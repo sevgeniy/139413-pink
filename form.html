@@ -5,195 +5,195 @@
 	<title>form</title>
 </head>
 <body>
-	<header class="header">
-		<div class="header__inner">
-			<div class="header__menu">
-				<div class="header__logo-container">
-					<a href="index.html"><img class="logo" src="" width="" height="" alt="Лого Пинк"></a>
+	<header class="page-header">
+		<div class="container">
+			<div class="page-header__top">
+				<div class="logo">
+					<a class="logo__link" href="index.html"><img class="logo__image" src="" alt="лого"></a>
 				</div>
-				<a class="header__menu-btn" href="">Menu</a>
-				<nav class="header__navigation">
-					<ul class="header__navigation-items">
-						<li class="header__navigation-item"><a href="#">Информация</a></li>
-						<li class="header__navigation-item"><a href="#">Блог</a></li>
-						<li class="header__navigation-item"><a href="#">Отзывы</a></li>
-						<li class="header__navigation-item"><a href="#">Конкурс</a></li>
-					</ul>
-				</nav>
-				<h1 class="header__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+				<a class="menu-toggle" href="#">Menu</a>
 			</div>
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li class="main-nav__item"><a class="main-nav__link" href="#">Информация</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#">Блог</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#">Отзывы</a></li>
+					<li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+				</ul>
+			</nav>
+			<h1 class="header__title">Конкурс на самое безбашеное путешествие с Пинк</h1>
 		</div>
-	</header>
-	<main>
-		<div class="form-container">
-			<p class="promo-text">Поделитесь своей историей и получите шанс выиграть ценный приз &ndash; 1000 миль на вашу бонусную карту!</p>
-			<form class="promo-form" action="#" method="post">
-				<div class="promo-container">
-					<fieldset class="personal">
-						<div class="personal__item">
-							<label class="personal__item-label" for="firstname">Имя:</label>
-							<input class="personal__item-input" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя" required>
+	</header>	
+	<main class="page-main">
+		<div class="page-main__inner page-main__inner--form container">
+			<p class="page-main__description">Поделитесь своей историей и получите шанс выиграть ценный приз &ndash; 1000 миль на вашу бонусную карту!</p>
+			<form class="page-main__form" action="#" method="post">
+				<div class="form__wrapper">
+					<div class="personal">
+						<div class="form__fields-wrapper">
+							<label class="form__label" for="firstname">Имя:</label>
+							<input class="form__field" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя" required>
 						</div>
-						<div class="personal__item">
-							<label class="personal__item-label" for="lastname">Фамилия:</label>
-							<input class="personal__item-input" id="lastname" name="lastname" type="text" placeholder="Укажите фамилию" required>
+						<div class="form__fields-wrapper">
+							<label class="form__label" for="lastname">Фамилия:</label>
+							<input class="form__field" id="lastname" name="lastname" type="text" placeholder="Укажите фамилию" required>
 						</div>
-						<div class="personal__item">
-							<label class="personal__item-label" for="patronymic">Отчество:</label>
-							<input class="personal__item-input" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже" required>
+						<div class="form__fields-wrapper">
+							<label class="form__label" for="patronymic">Отчество:</label>
+							<input class="form__field" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже" required>
+						</div>
+					</div>
+				</div>
+				<div class="form__wrapper form__wrapper--bg-gray">
+					<fieldset class="form__fieldset">
+						<legend class="form__title">С каким приложением путешествовали?</legend>
+						<div class="form__fields-wrapper">
+							<input class="form__field" type="radio" id="ios" name="appname" value="ios"><label class="form__label" for="ios">Pink для iOS</label>
+						</div>
+						<div class="form__fields-wrapper">
+							<input class="form__field" type="radio" id="android" name="appname" value="android"><label class="form__label" for="android">Pink для Android</label>
+						</div>
+						<div class="form__fields-wrapper">
+							<input class="form__field" type="radio" id="windows" name="appname" value="windows"><label class="form__label" for="windows">Windows Phone</label>
 						</div>
 					</fieldset>
 				</div>
-				<div class="promo-container promo-container--grey">
-					<fieldset class="form-app">
-						<legend class="form-app__legend">С каким приложением путешествовали?</legend>
-						<div class="form-app__item">
-							<input class="form-app__item-input" type="radio" id="ios" name="appname" value="ios"><label class="form-app__item-label" for="ios">Pink для iOS</label>
+				<div class="form__wrapper">
+					<fieldset class="form__fieldset">
+						<legend class="form__title form__title--required">Когда вы путешествовали?</legend>
+						<div class="form__fields-wrapper">
+							<input class="form__field" type="text" id="departure" name="departure" value="1 апреля 2015">
+							<label class="form__label" for="departure">Дата выезда</label>
 						</div>
-						<div class="form-app__item">
-							<input class="form-app__item-input" type="radio" id="android" name="appname" value="android"><label class="form-app__item-label" for="android">Pink для Android</label>
-						</div>
-						<div class="form-app__item">
-							<input class="form-app__item-input" type="radio" id="windows" name="appname" value="windows"><label class="form-app__item-label" for="windows">Windows Phone</label>
-						</div>
-					</fieldset>
-				</div>
-				<div class="promo-container">
-					<fieldset class="dates">
-						<legend class="dates__legend">Когда вы путешествовали?<span class="dates__required">*</span></legend>
-						<div class="dates__departure">
-							<input class="dates__item-input" type="text" id="departure" name="departure" value="1 апреля 2015">
-							<label class="dates__item-label" for="departure">Дата выезда</label>
-						</div>
-						<div class="dates__item">
-							<div class="range-control">
-								<button class="range-control__btn">-</button>
-								<input class="range-control__input" type="text" id="period" name="period" value="10 дней">
-								<button class="range-control__btn">+</button>
+						<div class="form__fields-wrapper">
+							<div class="counter">
+								<button class="counter__btn">-</button>
+								<input class="counter__field" type="text" id="period" name="period" value="10 дней">
+								<button class="counter__btn">+</button>
 							</div>
 							<label class="dates__item-label" for="period">Продолжительность</label>
 						</div>
-						<div class="dates__item">
-							<input class="dates__item-input" type="text" id="arrival" name="arrival" value="1 апреля 2015" readonly>
-							<label class="dates__item-label" for="arrival">Дата возвращения</label>
+						<div class="form__fields-wrapper">
+							<input class="form__field" type="text" id="arrival" name="arrival" value="1 апреля 2015" readonly>
+							<label class="form__label" for="arrival">Дата возвращения</label>
 						</div>
 					</fieldset>
 				</div>
-				<div class="promo-container promo-container--grey">
-					<fieldset class="friends">
-						<legend class="friends__legend">Количество попутчиков</legend>
-						<div class="friends__count">
-							<div class="range-control">
-								<button class="range-control__btn">-</button>
-								<input class="range-control__input" type="text" id="friends_count" name="friends_count" value="2 чел">
-								<button class="range-control__btn">+</button>
+				<div class="form__wrapper form__wrapper--bg-gray">
+					<fieldset class="form__fieldset">
+						<legend class="form__title">Количество попутчиков</legend>
+						<div class="form__fields-wrapper">
+							<div class="counter">
+								<button class="counter__btn">-</button>
+								<input class="counter__field" type="text" id="friends_count" name="friends_count" value="2 чел">
+								<button class="counter__btn">+</button>
 							</div>
 						</div>
 						<section class="friends__section">
 							<div class="friend">
 								<div class="friend__number">
 									<div class="friend__number-label">№</div>
-									<div class="friend__number-value">1</div>
+									<div class="friend__number-field">1</div>
 								</div>
 								<div class="friend__data">
-									<div class="friend__data-item">
-										<label class="friend__data-item-label" for="friend1_name">Имя:</label>
-										<input class="friend__data-item-input" type="text" id="friend1_name" name="friend1_name" placeholder="Введите ваше имя" required>
+									<div class="friend__data-wrapper">
+										<label class="friend__data-label" for="friend1_name">Имя:</label>
+										<input class="friend__data-field" type="text" id="friend1_name" name="friend1_name" placeholder="Введите ваше имя" required>
 									</div>
-									<div class="friend__data-item">
-										<label class="friend__data-item-label" for="friend1_nickname">Прозвище:</label>
-										<input class="friend__data-item-input" type="text" id="friend1_nickname" name="friend1_nickname" placeholder="Ну как же без этого!">
+									<div class="friend__data-wrapper">
+										<label class="friend__data-label" for="friend1_nickname">Прозвище:</label>
+										<input class="friend__data-field" type="text" id="friend1_nickname" name="friend1_nickname" placeholder="Ну как же без этого!">
 									</div>
 								</div>
 							</div>
 							<div class="friend">
 								<div class="friend__number">
 									<div class="friend__number-label">№</div>
-									<div class="friend__number-value">2</div>
+									<div class="friend__number-field">2</div>
 								</div>
 								<div class="friend__data">
-									<div class="friend__data-item">
-										<label class="friend__data-item-label" for="friend2_name">Имя:</label>
-										<input class="friend__data-item-input" type="text" id="friend2_name" name="friend1_name" placeholder="Введите ваше имя" required>
+									<div class="friend__data-wrapper">
+										<label class="friend__data-label" for="friend2_name">Имя:</label>
+										<input class="friend__data-field" type="text" id="friend2_name" name="friend1_name" placeholder="Введите ваше имя" required>
 									</div>
-									<div class="friend__data-item">
-										<label class="friend__data-item-label" for="friend2_nickname">Прозвище:</label>
-										<input class="friend__data-item-input" type="text" id="friend2_nickname" name="friend1_nickname" placeholder="Ну как же без этого!">
+									<div class="friend__data-wrapper">
+										<label class="friend__data-label" for="friend2_nickname">Прозвище:</label>
+										<input class="friend__data-field" type="text" id="friend2_nickname" name="friend1_nickname" placeholder="Ну как же без этого!">
 									</div>
 								</div>
 							</div>
 						</section>
 					</fieldset>
 				</div>
-				<div class="promo-container">
-					<fieldset class="doings">
-						<legend class="doings__legend">Ваши безбашенные достижения в путешествии</legend>
-						<ul class="doings__items">
+				<div class="form__wrapper">
+					<fieldset class="form__fieldset">
+						<legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
+						<ul class="doings__list">
 							<li class="doings__item">
-								<input  class="doings__item-input" type="checkbox" name="shark" id="shark" checked><label class="doings__item-label" for="shark">Сделал селфи с акулой</label>
+								<input  class="form__checkbox" type="checkbox" name="shark" id="shark" checked><label class="form__label" for="shark">Сделал селфи с акулой</label>
 							</li>
 							<li>
-								<input  class="doings__item-input" type="checkbox" name="beach" id="beach" checked><label class="doings__item-label" for="beach">Обгорел на пляже</label>
+								<input  class="form__checkbox" type="checkbox" name="beach" id="beach" checked><label class="form__label" for="beach">Обгорел на пляже</label>
 							</li>
 							<li>
-								<input  class="doings__item-input" type="checkbox" name="norris" id="norris"><label class="doings__item-label" for="norris">Видел Чака Норриса</label>
+								<input  class="form__checkbox" type="checkbox" name="norris" id="norris"><label class="form__label" for="norris">Видел Чака Норриса</label>
 							</li>
 							<li>
-								<input  class="doings__item-input" type="checkbox" id="souvenir" name="souvenir"><label class="doings__item-label" for="souvenir">Накупил сувениров</label>
+								<input  class="form__checkbox" type="checkbox" id="souvenir" name="souvenir"><label class="form__label" for="souvenir">Накупил сувениров</label>
 							</li>
 							<li>
-								<input  class="doings__item-input" type="checkbox" id="tower" name="tower" checked><label class="doings__item-label" for="tower">Удержал башню</label>
+								<input  class="form__checkbox" type="checkbox" id="tower" name="tower" checked><label class="form__label" for="tower">Удержал башню</label>
 							</li>
 							<li>
-								<input  class="doings__item-input" type="checkbox" id="demolition" name="demolition"><label class="doings__item-label" for="demolition">Разгромил отель</label>
+								<input  class="form__checkbox" type="checkbox" id="demolition" name="demolition"><label class="form__label" for="demolition">Разгромил отель</label>
 							</li>
 						</ul>
 					</fieldset>
 				</div>
-				<div class="promo-container promo-container--grey">
-					<fieldset class="images">
-						<legend  class="images__legend">Ваши фотографии из поездки<span class="images__required">*</span></legend>
-						<input class="images__upload-btn" type="file" id="upload_image" name="upload_image">
-						<div class="images__list">
-							<figure class="image">
-								<img class="image__img" src="" alt="" width="" height="">
-								<button class="image__close-btn">Close</button>
-								<figcaption class="image__title">IMG-1.JPG</figcaption>
+				<div class="form__wrapper form__wrapper--bg-gray">
+					<fieldset class="form__fieldset">
+						<legend  class="form__title form__title--required">Ваши фотографии из поездки</legend>
+						<input class="form__upload-btn" type="file" id="upload_image" name="upload_image">
+						<div class="form__photos">
+							<figure class="photo-item">
+								<img class="photo-item__image" src="" alt="" width="" height="">
+								<button class="photo-item__close">Close</button>
+								<figcaption class="photo-item__caption">IMG-1.JPG</figcaption>
 							</figure>
-							<figure class="image">
-								<img class="image__img" src="" alt="" width="" height="">
-								<button class="image__close-btn">Close</button>
-								<figcaption class="image__title">IMG-2.JPG</figcaption>
+							<figure class="photo-item">
+								<img class="photo-item__image" src="" alt="" width="" height="">
+								<button class="photo-item__close">Close</button>
+								<figcaption class="photo-item__caption">IMG-2.JPG</figcaption>
 							</figure>
-							<figure class="image">
-								<img class="image__img" src="" alt="" width="" height="">
-								<button class="image__close-btn">Close</button>
-								<figcaption class="image__title">IMG-3.JPG</figcaption>
+							<figure class="photo-item">
+								<img class="photo-item__image" src="" alt="" width="" height="">
+								<button class="photo-item__close">Close</button>
+								<figcaption class="photo-item__caption">IMG-3.JPG</figcaption>
 							</figure>
-							<figure class="image">
-								<img class="image__img" src="" alt="" width="" height="">
-								<button class="image__close-btn">Close</button>
-								<figcaption class="image__title">IMG-4.JPG</figcaption>
+							<figure class="photo-item">
+								<img class="photo-item__image" src="" alt="" width="" height="">
+								<button class="photo-item__close">Close</button>
+								<figcaption class="photo-item__caption">IMG-4.JPG</figcaption>
 							</figure>
-							<figure class="image">
-								<img class="image__img" src="" alt="" width="" height="">
-								<button class="image__close-btn">Close</button>
-								<figcaption class="image__title">IMG-5.JPG</figcaption>
+							<figure class="photo-item">
+								<img class="photo-item__image" src="" alt="" width="" height="">
+								<button class="photo-item__close">Close</button>
+								<figcaption class="photo-item__caption">IMG-5.JPG</figcaption>
 							</figure>
-							<figure class="image">
-								<img class="image__img" src="" alt="" width="" height="">
-								<button class="image__close-btn">Close</button>
-								<figcaption class="image__title">IMG-6.JPG</figcaption>
+							<figure class="photo-item">
+								<img class="photo-item__image" src="" alt="" width="" height="">
+								<button class="photo-item__close">Close</button>
+								<figcaption class="photo-item__caption">IMG-6.JPG</figcaption>
 							</figure>
-							<figure class="image">
-								<img class="image__img" src="" alt="" width="" height="">
-								<button class="image__close-btn">Close</button>
-								<figcaption class="image__title">IMG-7.JPG</figcaption>
+							<figure class="photo-item">
+								<img class="photo-item__image" src="" alt="" width="" height="">
+								<button class="photo-item__close">Close</button>
+								<figcaption class="photo-item__caption">IMG-7.JPG</figcaption>
 							</figure>
-							<figure class="image">
-								<img class="image__img" src="" alt="" width="" height="">
-								<button class="image__close-btn">Close</button>
-								<figcaption class="image__title">IMG-8.JPG</figcaption>
+							<figure class="photo-item">
+								<img class="photo-item__image" src="" alt="" width="" height="">
+								<button class="photo-item__close">Close</button>
+								<figcaption class="photo-item__caption">IMG-8.JPG</figcaption>
 							</figure>
 						</div>
 					</fieldset>
@@ -219,17 +219,19 @@
 			</div>
 		</div>
 	</main>
-	<footer class="footer">
-		<div class="footer__logo-container">
-			<a href="index.html"><img class="footer-logo" src="" alt="Лого Pink"></a>
-		</div>
-		<div class="social-links">
-			<a class="social-links__item-tw" href="#">Twitter</a>
-			<a class="social-links__item-fb" href="#">Facebook</a>
-			<a class="social-links__item-ytb" href="#">Youtube</a>
-		</div>
-		<div class="footer__copyright">
-			<span class="footer_copyright-text">Разработано</span><a class="footer__copyright-link" href="#">HtmlAcademy</a>
+	<footer class="page-footer">
+		<div class="container">
+			<div class="logo logo--footer">
+				<a class="logo__link" href="index.html"><img class="logo__image .logo__image--footer" src="" alt="Лого Pink"></a>
+			</div>
+			<div class="social-links">
+				<a class="social-links__item social-links__item--tw" href="#">Twitter</a>
+				<a class="social-links__item social-links__item--fb" href="#">Facebook</a>
+				<a class="social-links__item social-links__item--ytb" href="#">Youtube</a>
+			</div>
+			<div class="page-footer__copyright">
+				<span class="page-footer__copyright-text">Разработано</span><a class="page-footer__copyright-link" href="#">HtmlAcademy</a>
+			</div>
 		</div>
 	</footer>
 </body>
