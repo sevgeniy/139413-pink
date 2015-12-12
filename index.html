@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
   </head>
   <body>
 	<header class="page-header">
-		<div class="container">
+		<div class="page-header__menu-wrapper">
 			<div class="page-header__top">
 				<div class="logo">
 					<a class="logo__link" href="index.html"><img class="logo__image" src="" width="" height="" alt="лого"></a>
@@ -23,77 +23,66 @@
 					<li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
 				</ul>
 			</nav>
-			<h1 class="page-header__title">Взгляните на жизнь иначе!</h1>
-			<div class="download">
-				<a href="#" class="download__link">Скачать приложение</a>
-				<div class="download__images">
-					<img class="download__image" src="" width="" height="" alt="Apple лого">
-					<img class="download__image" src="" width="" height="" alt="Android лого">
-					<img class="download__image" src="" width="" height="" alt="Windows лого">
-				</div>
-				<p class="download__text">Доступно для iPhone, Android, Windows Phone, OS X, Windows 8</p>
+		</div>
+		<h1 class="page-header__title page-header__title--index">Взгляните на жизнь иначе!</h1>
+		<div class="download">
+			<a href="#" class="download__link">Скачать приложение</a>
+			<div class="download__images">
+				<img class="download__image" src="" width="" height="" alt="Apple лого">
+				<img class="download__image" src="" width="" height="" alt="Android лого">
+				<img class="download__image" src="" width="" height="" alt="Windows лого">
 			</div>
+			<p class="download__text">Доступно для iPhone, Android, Windows Phone, OS X, Windows 8</p>
 		</div>
 	</header>
 	<main class="page-main">
 		<div class="promo">
-			<div class="container">
-				<div class="promo__text">Устали от серости мегаполиса?</div>
-				<div class="promo__text">Нам есть, что вам предложить!</div>
-			</div>
+			<div class="promo__text">Устали от серости мегаполиса?</div>
+			<div class="promo__text">Нам есть, что вам предложить!</div>
 		</div>
 		<div class="features">
-			<div class="container container--gray">
-				<div class="features__item">
-					<h2 class="features__item-header">Поднимает настроение</h2>
-					<p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-				</div>
-				<div class="features__item">
-					<h2 class="features__item-header">Меняет мир вокруг</h2>
-					<p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-				</div>
-				<div class="features__item">
-					<h2 class="features__item-header">Заводит новых друзей</h2>
-					<p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
-				</div>
-				<img class="features__image" src="" width="" height="" alt="Айфончик с открытым приложением">
+			<div class="features__item">
+				<h2 class="features__item-header">Поднимает настроение</h2>
+				<p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
 			</div>
+			<div class="features__item">
+				<h2 class="features__item-header">Меняет мир вокруг</h2>
+				<p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+			</div>
+			<div class="features__item">
+				<h2 class="features__item-header">Заводит новых друзей</h2>
+				<p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+			</div>
+			<img class="features__image" src="" width="" height="" alt="Айфончик с открытым приложением">
 		</div>
 		<div class="reviews-slider">
-			<div class="container">
-				<input type="radio" name="review" id="review-btn-1">
-				<input type="radio" name="review" id="review-btn-2" checked>
-				<input type="radio" name="review" id="review-btn-3">
-				<div class="reviews-slider__controls">
-					<label class="reviews-slider__control" for="review-btn-1">1</label>
-					<label class="reviews-slider__control" for="review-btn-2">2</label>
-					<label class="reviews-slider__control" for="review-btn-3">3</label>
+			<input type="radio" name="review" id="review-btn-1">
+			<input type="radio" name="review" id="review-btn-2" checked>
+			<input type="radio" name="review" id="review-btn-3">
+			<div class="reviews-slider__slides">
+				<div class="reviews-slider__slide">
+					<div class="reviews-slider__slide-title">Николай Петров 1</div>
+					<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
 				</div>
-				<div class="reviews-slider__slides">
-					<div class="reviews-slider__slide">
-						<div class="reviews-slider__slide-title">Николай Петров 1</div>
-						<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
-					</div>
-					<div class="reviews-slider__slide">
-						<div class="reviews-slider__slide-title">Николай Петров 2</div>
-						<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
-					</div>
-					<div class="reviews-slider__slide">
-						<div class="reviews-slider__slide-title">Николай Петров 3</div>
-						<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
-					</div>
-				</div>				
+				<div class="reviews-slider__slide">
+					<div class="reviews-slider__slide-title">Николай Петров 2</div>
+					<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
+				</div>
+				<div class="reviews-slider__slide">
+					<div class="reviews-slider__slide-title">Николай Петров 3</div>
+					<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
+				</div>
+			</div>
+			<div class="reviews-slider__controls">
+				<label class="reviews-slider__control" for="review-btn-1">1</label>
+				<label class="reviews-slider__control" for="review-btn-2">2</label>
+				<label class="reviews-slider__control" for="review-btn-3">3</label>
 			</div>
 		</div>
-		<div class="price-table container container--gray container--p0">
+		<div class="price-table">
 			<input type="radio" name="price" id="price-btn-1">
 			<input type="radio" name="price" id="price-btn-2" checked>
 			<input type="radio" name="price" id="price-btn-3">
-			<div class="price-table__controls">
-				<label class="price-table__control" for="price-btn-1">1</label>
-				<label class="price-table__control" for="price-btn-2">2</label>
-				<label class="price-table__control" for="price-btn-3">3</label>
-			</div>
 			<div class="price-table__wrapper">
 				<div class="price-table__column-wrapper">
 					<ul class="price-table__column">
@@ -156,25 +145,28 @@
 					</ul>
 				</div>
 			</div>
+			<div class="price-table__controls">
+				<label class="price-table__control" for="price-btn-1">1</label>
+				<label class="price-table__control" for="price-btn-2">2</label>
+				<label class="price-table__control" for="price-btn-3">3</label>
+			</div>
 		</div>
 	</main>
 	<footer class="main-footer">
-		<div class="container">
-			<div class="main-footer__title">Остались вопросы?Свяжитесь с нами!</div>
-			<div class="main-footer__item">
-				<div class="main-footer__item-header">Звоните:</div>
-				<div class="main-footer__item-text">+7(812)555-66-66</div>
-			</div>
-			<div class="main-footer__item">
-				<div class="main-footer__item-header">Пишите:</div>
-				<a class="main-footer__item-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-			</div>
-			<div class="main-footer__item">
-				<div class="main-footer__item-header">Приезжайте в гости:</div>
-				<div class="main-footer__item-text">ул.Большая Конюшенная, 19/8</div>
-			</div>
-			<div id="main-footer__map-container"></div>
+		<div class="main-footer__title">Остались вопросы?Свяжитесь с нами!</div>
+		<div class="main-footer__item">
+			<div class="main-footer__item-header">Звоните:</div>
+			<div class="main-footer__item-text">+7(812)555-66-66</div>
 		</div>
+		<div class="main-footer__item">
+			<div class="main-footer__item-header">Пишите:</div>
+			<a class="main-footer__item-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+		</div>
+		<div class="main-footer__item">
+			<div class="main-footer__item-header">Приезжайте в гости:</div>
+			<div class="main-footer__item-text">ул.Большая Конюшенная, 19/8</div>
+		</div>
+		<div id="main-footer__map-container"></div>
 	</footer>
   </body>
 </html>
