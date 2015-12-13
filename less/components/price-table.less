@@ -1,0 +1,134 @@
+.price-table {
+	.container();
+	.container--p0();
+	.container--gray();
+	padding-top: 90px;
+	padding-bottom: 42px;
+	text-transform: uppercase;
+	overflow: hidden;
+	
+	&__wrapper {
+		top: 90px;
+		left: 20px;
+		width: @width-sm-no-padd * 3;
+		font-size: 0;
+	}
+
+	&__column-wrapper {
+		display: inline-block;
+		width: @width-sm-no-padd;
+		padding-bottom: 40px;
+	}
+
+	&__column {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__column-header,
+	&__option {
+		border-left: 1px solid @light-gray;
+		border-right: 1px solid @light-gray;
+	}
+
+	&__column-header {
+		padding-top: 19px;
+		padding-bottom: 22px;
+		background-color: @blue;
+		color: @white;
+	}
+
+	&__rate-name {
+		margin-bottom: 7px;
+		font-size: @font-size-md;
+		line-height: @line-height-lg-2;
+		font-weight: bold;
+	}
+
+	&__rate-price {
+		font-size: @font-size-lg;
+		line-height: @line-height-lg-2;
+	}
+
+	&__option {
+		.clearfix();		
+		padding-top: 18px;
+		padding-bottom: 16px;
+		font-size: @font-size;
+		line-height: @line-height-lg-2;
+		background-color: @white;
+		color: @dark-blue;
+		border: 1px solid @light-gray;
+	}
+
+	&__option-name {
+		float: left;
+		width: 185px;
+		margin-left: 22px;
+		text-align: left;		
+	}
+
+	&__option-value {
+		float: right;
+		width: 30px;
+		margin-right: 18px;
+	}
+
+	input {
+		display: none;
+	}
+
+	&__controls {
+		width: @width-slid-contr;
+		margin-left: (@width-sm - @width-slid-contr) / 2;
+		font-size: 0;
+	}
+	
+	&__control {
+		display: inline-block;
+		width: 6px;
+		height: 6px;
+		margin-right: 19px;		
+		background-color: @dark-gray;
+		border: 3px solid @gray;
+		border-radius: 50%;
+	}
+
+	&__control:last-child {
+		margin-right: 0;
+	}
+
+	&__control:hover {
+		background-color: @white;
+		border-color: @dark-blue;
+		cursor: pointer;
+	}
+
+	#price-btn-1:checked ~ &__controls &__control[for="price-btn-1"] {
+		background-color: @white;
+		border-color: @dark-blue;
+	}
+
+	#price-btn-2:checked ~ &__controls &__control[for="price-btn-2"] {
+		background-color: @white;
+		border-color: @dark-blue;
+	}
+
+	#price-btn-3:checked ~ &__controls &__control[for="price-btn-3"] {
+		background-color: @white;
+		border-color: @dark-blue;
+	}
+
+	#price-btn-1:checked ~ &__wrapper {
+		transform: translate(@cont-padding, 0);
+	}
+
+	#price-btn-2:checked ~ &__wrapper {
+		transform: translate(@cont-padding - @width-sm-no-padd, 0);
+	}
+
+	#price-btn-3:checked ~ &__wrapper {
+		transform: translate(@cont-padding - (@width-sm-no-padd * 2), 0);
+	}
+}
