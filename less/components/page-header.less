@@ -8,9 +8,9 @@
 
 	&__top {
 		.clearfix();
-		position: absolute;
+		position: fixed;
 		top: 0;
-		left: 0;
+		margin: 0 auto;
 		width: @width-sm;
 		padding: 22px 0;
 		background-color: rgba(0, 0, 0, 0.3);
@@ -18,7 +18,7 @@
 
 	&__title {
 		.container();
-		padding-top: 91px;
+		// padding-top: 91px;
 		padding-right: 20px;
 		padding-left: 20px;	
 		padding-bottom: 60px;
@@ -27,16 +27,8 @@
 	}
 
 	&__title--index {
-		padding-bottom: 320px;
+		// padding-bottom: 320px;
 	}
-}
-
-.logo {
-	display: block;
-	float: left;
-	width: 40px;
-	margin-left: 22px;
-	line-height: @font-size;
 }
 
 .menu-toggle {
@@ -47,6 +39,7 @@
 }
 
 .main-nav {
+	display: none;
 	position: absolute;
 	top: 68px;
 	width: @width-sm;
