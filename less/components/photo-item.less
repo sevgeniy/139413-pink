@@ -1,0 +1,52 @@
+.photo-item {
+	position: relative;
+	display: inline-block;
+	margin: 0;
+	margin-right: 36px;
+	padding: 0;
+	vertical-align: middle;
+	text-align: left;
+
+	&__caption {
+		margin-bottom: 22px;
+		font-size: @font-size-sm;
+		line-height: @line-height;
+	}
+
+	&__delete-btn {
+		position: absolute;
+		top: -15px;
+		right: -15px;
+		width: 31px;
+		height: 31px;
+		font-size: 0;
+		background-color: @white;
+		color: @light-gray;
+		border: 3px solid @light-gray;
+		border-radius: 50%;
+		cursor: pointer;
+		transform: rotate(45deg);
+
+		&:before {
+			content: "";
+			display: block;			
+			width: 13px;
+			height: 0;
+			border: 1px solid @light-gray;
+			transform: rotate(180deg) translate(1px, -1px);
+		}
+
+		&:after {
+			content: "";
+			display: block;			
+			width: 13px;
+			height: 0;
+			border: 1px solid @light-gray;
+			transform: rotate(90deg) translate(-1px, 1px);
+		}
+	}
+
+	&:nth-child(3n) {
+		margin-right: 0;
+	}
+}
