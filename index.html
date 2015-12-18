@@ -7,13 +7,13 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,700&subset=latin,cyrillic,latin-ext' rel='stylesheet' type='text/css'>
   </head>
   <body>
-	<header class="page-header">
+	<header class="page-header page-header--index">
 		<div class="page-header__menu-wrapper">
 			<div class="page-header__top">
 				<div class="logo">
-					<a class="logo__link" href="index.html"><img class="logo__image" src="" width="" height="" alt="лого"></a>
+					<a class="logo__link" href="index.html"><img class="logo__image" src="img/logotype-white-tablet.svg" width="" height="" alt="лого"></a>
 				</div>
-				<a class="menu-toggle" href="#">Menu</a>
+				<a class="menu-toggle" href="#"><img src="img/menu-burger.svg" alt="Меню бургер"></a>
 			</div>
 			<nav class="main-nav">
 				<ul class="main-nav__list">
@@ -28,11 +28,11 @@
 		<div class="download">
 			<a href="#" class="download__link">Скачать приложение</a>
 			<div class="download__images">
-				<img class="download__image" src="" width="" height="" alt="Apple лого">
-				<img class="download__image" src="" width="" height="" alt="Android лого">
-				<img class="download__image" src="" width="" height="" alt="Windows лого">
+				<img class="download__image" src="img/apple-logo.svg" width="" height="" alt="Apple лого">
+				<img class="download__image" src="img/android-logo.svg" width="" height="" alt="Android лого">
+				<img class="download__image" src="img/microsoft-logo.svg" width="" height="" alt="Windows лого">
 			</div>
-			<p class="download__text">Доступно для iPhone, Android, Windows Phone, OS X, Windows 8</p>
+			<p class="download__text">Доступно для iPhone, IPad, Android, Windows Phone, OS X, Windows 8</p>
 		</div>
 	</header>
 	<main class="page-main">
@@ -41,19 +41,30 @@
 			<div class="promo__text">Нам есть, что вам предложить!</div>
 		</div>
 		<div class="features">
-			<div class="features__item">
-				<h2 class="features__item-header">Поднимает настроение</h2>
-				<p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+			<div class="features__container">
+				<div class="features__item">
+					<h2 class="features__item-header">Поднимает настроение</h2>
+					<p class="features__item-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+				</div>
+				<div class="features__item">
+					<h2 class="features__item-header">Меняет мир вокруг</h2>
+					<p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+				</div>
+				<div class="features__item">
+					<h2 class="features__item-header">Заводит новых друзей</h2>
+					<p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+				</div>
 			</div>
-			<div class="features__item">
-				<h2 class="features__item-header">Меняет мир вокруг</h2>
-				<p class="features__item-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+		</div>
+		<div class="effect">
+			<div class="effect__logo">
+				<img src="img/timer-gray.svg" alt="" class="effect__image">
 			</div>
-			<div class="features__item">
-				<h2 class="features__item-header">Заводит новых друзей</h2>
-				<p class="features__item-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+			<div class="effect__container">
+				<div class="effect__title">Эффект<br>на 24 часа!</div>
+				<p class="effect__description">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+				<a href="#" class="effect__link">Узнать больше об исследовании</a>
 			</div>
-			<img class="features__image" src="" width="" height="" alt="Айфончик с открытым приложением">
 		</div>
 		<div class="reviews-slider">
 			<input type="radio" name="review" id="review-btn-1">
@@ -61,16 +72,34 @@
 			<input type="radio" name="review" id="review-btn-3">
 			<div class="reviews-slider__slides">
 				<div class="reviews-slider__slide">
-					<div class="reviews-slider__slide-title">Николай Петров 1</div>
-					<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
+					<div class="reviews-slider__slide-title-top">
+						<div class="reviews-slider__slide-title">Николай Петров 1</div>
+					</div>
+					<blockquote class="reviews-slider__slide-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
+					<div class="reviews-slider__slide-title-bottom">
+						<div class="reviews-slider__slide-title">Николай Петров 1</div>
+						<div class="reviews-slider__slide-title-descr">25 лет, водитель трамвая</div>
+					</div>
 				</div>
 				<div class="reviews-slider__slide">
-					<div class="reviews-slider__slide-title">Николай Петров 2</div>
-					<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
+					<div class="reviews-slider__slide-title-top">
+						<div class="reviews-slider__slide-title">Николай Петров 2</div>
+					</div>
+					<blockquote class="reviews-slider__slide-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
+					<div class="reviews-slider__slide-title-bottom">
+						<div class="reviews-slider__slide-title">Николай Петров 2</div>
+						<div class="reviews-slider__slide-title-descr">25 лет, водитель трамвая</div>
+					</div>
 				</div>
 				<div class="reviews-slider__slide">
-					<div class="reviews-slider__slide-title">Николай Петров 3</div>
-					<blockquote class="reviews-slider__slide-text">"Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!"</blockquote>
+					<div class="reviews-slider__slide-title-top">
+						<div class="reviews-slider__slide-title">Николай Петров 3</div>
+					</div>
+					<blockquote class="reviews-slider__slide-text">Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!</blockquote>
+					<div class="reviews-slider__slide-title-bottom">
+						<div class="reviews-slider__slide-title">Николай Петров 3</div>
+						<div class="reviews-slider__slide-title-descr">25 лет, водитель трамвая</div>
+					</div>
 				</div>
 			</div>
 			<div class="reviews-slider__controls">
@@ -87,48 +116,65 @@
 				<div class="price-table__column-wrapper">
 					<ul class="price-table__column">
 						<li class="price-table__column-header">
-							<div class="price-table__rate-name">Стандарт 1</div>
-							<div class="price-table__rate-price">3,99 USD</div>
+							<div class="price-table__rate-name">База</div>
+							<div class="price-table__rate-price">1,99 USD</div>
 						</li>
 						<li class="price-table__option">
 							<div class="price-table__option-name">Розовый фильтр</div>
-							<div class="price-table__option-value">Да</div>
 						</li>
 						<li class="price-table__option">
 							<div class="price-table__option-name">Смайлики</div>
-							<div class="price-table__option-value">Да</div>
 						</li>
 						<li class="price-table__option">
 							<div class="price-table__option-name">Комментарии</div>
-							<div class="price-table__option-value">Нет</div>
-						</li>
-					</ul>
-				</div>
-				<div class="price-table__column-wrapper">
-					<ul class="price-table__column">
-						<li class="price-table__column-header price-table__column-header--hit">
-							<div class="price-table__rate-name">Стандарт 2</div>
-							<div class="price-table__rate-price">3,99 USD</div>
-						</li>
-						<li class="price-table__option">
-							<div class="price-table__option-name">Розовый фильтр</div>
-							<div class="price-table__option-value">Да</div>
-						</li>
-						<li class="price-table__option">
-							<div class="price-table__option-name">Смайлики</div>
-							<div class="price-table__option-value">Да</div>
-						</li>
-						<li class="price-table__option">
-							<div class="price-table__option-name">Комментарии</div>
-							<div class="price-table__option-value">Нет</div>
 						</li>
 					</ul>
 				</div>
 				<div class="price-table__column-wrapper">
 					<ul class="price-table__column">
 						<li class="price-table__column-header">
-							<div class="price-table__rate-name">Стандарт 3</div>
+							<div class="price-table__rate-name">База</div>
+							<div class="price-table__rate-price">1,99 USD</div>
+						</li>
+						<li class="price-table__option">
+							<div class="price-table__option-name">Розовый фильтр</div>
+							<div class="price-table__option-value">Да</div>
+						</li>
+						<li class="price-table__option">
+							<div class="price-table__option-name">Смайлики</div>
+							<div class="price-table__option-value price-table__option-value--no">Нет</div>
+						</li>
+						<li class="price-table__option">
+							<div class="price-table__option-name">Комментарии</div>
+							<div class="price-table__option-value price-table__option-value--no">Нет</div>
+						</li>
+					</ul>
+				</div>
+				<div class="price-table__column-wrapper">
+					<ul class="price-table__column">
+						<li class="price-table__column-header price-table__column-header--hit">
+							<div class="price-table__rate-name">Стандарт</div>
 							<div class="price-table__rate-price">3,99 USD</div>
+						</li>
+						<li class="price-table__option">
+							<div class="price-table__option-name">Розовый фильтр</div>
+							<div class="price-table__option-value">Да</div>
+						</li>
+						<li class="price-table__option">
+							<div class="price-table__option-name">Смайлики</div>
+							<div class="price-table__option-value price-table__option-value--no">Нет</div>
+						</li>
+						<li class="price-table__option">
+							<div class="price-table__option-name">Комментарии</div>
+							<div class="price-table__option-value price-table__option-value--no">Нет</div>
+						</li>
+					</ul>
+				</div>
+				<div class="price-table__column-wrapper">
+					<ul class="price-table__column">
+						<li class="price-table__column-header">
+							<div class="price-table__rate-name">Анлим</div>
+							<div class="price-table__rate-price">9,99 USD</div>
 						</li>
 						<li class="price-table__option">
 							<div class="price-table__option-name">Розовый фильтр</div>
@@ -140,7 +186,7 @@
 						</li>
 						<li class="price-table__option">
 							<div class="price-table__option-name">Комментарии</div>
-							<div class="price-table__option-value">Нет</div>
+							<div class="price-table__option-value">Да</div>
 						</li>
 					</ul>
 				</div>
@@ -155,13 +201,15 @@
 	<footer class="main-footer">
 		<div class="container">
 			<div class="main-footer__title">Остались вопросы?Свяжитесь с нами!</div>
-			<div class="main-footer__item">
-				<div class="main-footer__item-header">Звоните:</div>
-				<div class="main-footer__item-text">+7(812)555-66-66</div>
-			</div>
-			<div class="main-footer__item">
-				<div class="main-footer__item-header">Пишите:</div>
-				<a class="main-footer__item-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+			<div class="clearfix">
+				<div class="main-footer__item">
+					<div class="main-footer__item-header">Звоните:</div>
+					<div class="main-footer__item-text">+7(812)555-66-66</div>
+				</div>
+				<div class="main-footer__item">
+					<div class="main-footer__item-header">Пишите:</div>
+					<a class="main-footer__item-link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+				</div>
 			</div>
 			<div class="main-footer__item">
 				<div class="main-footer__item-header">Приезжайте в гости:</div>
@@ -169,7 +217,20 @@
 			</div>
 		</div>
 		<div id="map-container" class="main-footer__map-container">
-			<img src="" width="320" height="200" alt="Карта">
+			<img src="" width="100%" height="200" alt="Карта">
+		</div>
+		<div class="page-footer">
+			<div class="logo logo--footer">
+				<a class="logo__link" href="index.html"><img class="logo__image .logo__image--footer" src="img/logotype-blue-tablet.svg" alt="Лого Pink"></a>
+			</div>
+			<div class="social-links">
+				<a class="social-links__item social-links__item--tw" href="#">Twitter</a>
+				<a class="social-links__item social-links__item--fb" href="#">Facebook</a>
+				<a class="social-links__item social-links__item--ytb" href="#">Youtube</a>
+			</div>
+			<div class="page-footer__copyright">
+				<span class="page-footer__copyright-text">Разработано</span><a class="page-footer__copyright-link" href="#">HtmlAcademy</a>
+			</div>
 		</div>
 	</footer>	
   </body>

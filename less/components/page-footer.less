@@ -2,12 +2,31 @@
 	.container();
 	.container--white();
 	
-	padding-top: 57px;
+	padding-top: 21px;
 	
 	&__copyright {
 		margin: 0 auto;
 		padding-top: 40px;
 		padding-bottom: 13px;
+		line-height: 34px;
+		vertical-align: middle;
+	}
+	
+	&__copyright-text {
+		
+	}
+
+	&__copyright-link {
+		font-size: 0;
+
+		&:after {
+			content: "";
+			display: inline-block;
+			vertical-align: middle;
+			width: 27px;
+			height: 34px;
+			background: url("../img/htmlacademy_red.svg") center center no-repeat;
+		}
 	}
 }
 
@@ -25,15 +44,15 @@
 		border-radius: 50%;
 
 		&--tw {
-
+			background: url("../img/twitter.svg") center center no-repeat;
 		}
 
 		&--fb {
-			
+			background: url("../img/facebook.svg") center center no-repeat;
 		}
 
 		&--ytb {
-			
+			background: url("../img/youtube.svg") center center no-repeat;
 		}
 
 		&:last-child {
