@@ -1,0 +1,38 @@
+.counter {
+	font-size: 0;
+	vertical-align: bottom;
+
+	&__field {
+		width: @width-sm-no-padd - 81px * 2;
+		height: 55px;
+		margin-bottom: 10px;
+		padding: 3px 16px;
+		font-size: @font-size-md;
+		line-height: @line-height-lg-2;
+		text-align: center;
+		border: 2px solid @light-gray;
+		border-left: none;
+		border-right: none;
+
+		&--gray {
+			background-color: @gray;
+		}
+	}
+
+	&__btn {
+		width: 65px;
+		height: 65px;
+		font-size: @font-size-md;
+		background-color: @gray;
+		border: 2px solid @light-gray;
+		border-radius: @border-radius 0 0 @border-radius;
+
+		&--right {
+			border-radius: 0 @border-radius @border-radius 0;
+		}
+
+		&--white {
+			background-color: @white;
+		}
+	}
+}

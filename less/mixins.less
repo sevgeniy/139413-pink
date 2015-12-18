@@ -1,16 +1,31 @@
 .container {
-	width: @width-sm - (@cont-padding * 2);
 	margin: 0 auto;
-	padding: 0 @cont-padding;
-	// outline: 1px solid @white;
+
+	@media (max-width: @screen-sm) {
+		width: @width-sm - (@padding-sm * 2);
+		padding: 0 @padding-sm;
+	}
+
+	@media (min-width: @screen-sm) {
+		width: @width-md - (@padding-md * 2);
+		padding: 0 @padding-md;
+	}
 }
 
 // почему-то определить эти классы внутри .container используя & не удалось, потому что тогда
 // не удаеся примешать модификатор к какому-нибудь классу - происходит ошибка компиляции типа 
 // .container--white is undefined in page-header.less
 .container--p0 {
-	width: @width-sm;
-	padding: 0;
+
+	@media (max-width: @screen-sm) {
+		width: @width-sm;
+		padding: 0;// после компиляции less не сохраняет порядок следования селекторов 
+	}
+
+	@media (min-width: @screen-sm) {
+		width: @width-md;
+		padding: 0;
+	}
 }
 
 .container--white {
