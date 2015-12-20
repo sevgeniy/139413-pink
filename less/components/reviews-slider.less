@@ -2,7 +2,17 @@
 	.container();
 	.container--white();
 	padding-top: 44px;
-	padding-bottom: 42px;
+	padding-bottom: 27px;
+
+	@media (max-width: @screen-sm) {
+		padding-top: 44px;
+		padding-bottom: 27px;
+	}
+
+	@media (min-width: @screen-sm) {
+		padding-top: 82px;
+		padding-bottom: 27px;
+	}
 
 	&__slides {
 		margin: 0;
@@ -12,19 +22,85 @@
 
 	&__slide {
 		display: none;
-		width: @width-sm-no-padd;
 		padding-bottom: 40px;
+
+		@media (max-width: @screen-sm) {
+			width: @width-sm-no-padd;
+		}
+
+		@media (min-width: @screen-sm) {
+			width: @width-md-no-padd;
+		}
+	}
+
+	&__slide-title-top {
+		display: none;
+
+		@media (max-width: @screen-sm) {
+			display: block;
+		}
+
+		@media (min-width: @screen-sm) {
+			display: none;
+		}
+	}
+
+	&__slide-title-bottom {
+		display: none;
+		
+		.reviews-slider__slide-title {
+			margin-bottom: 0;
+		}
+
+		@media (max-width: @screen-sm) {
+			display: none;
+		}
+
+		@media (min-width: @screen-sm) {
+			display: block;
+		}
 	}
 
 	&__slide-title {
 		margin-bottom: 16px;
-		font-size: @font-size-md;
-		line-height: @line-height-lg-2;
 		font-weight: bold;
+
+		@media (max-width: @screen-sm) {
+			font-size: @fs;
+			line-height: 30/18;
+		}
+
+		@media (min-width: @screen-sm) {
+			font-size: @fs-l;
+			line-height: 1.5;
+		}
+
+		&-descr {
+			@media (min-width: @screen-sm) {
+				font-size: @fs-xs;
+				line-height: 30/14;
+			}			
+		}
 	}
 
 	&__slide-text {
-		
+		&:before {
+			content:"\00ab";
+		}
+
+		&:after {
+			content:"\00bb";
+		}
+
+		@media (max-width: @screen-sm) {
+			font-size: @fs-xxs;
+			line-height: 30/14;
+		}
+
+		@media (min-width: @screen-sm) {
+			font-size: @fs;
+			line-height: 30/18;
+		}
 	}
 
 	input {
@@ -35,6 +111,14 @@
 		width: 74px;
 		margin-left: (@width-sm-no-padd - @width-slid-contr) / 2;
 		font-size: 0;
+
+		@media (max-width: @screen-sm) {
+			margin-left: (@width-sm-no-padd - @width-slid-contr) / 2;
+		}
+
+		@media (min-width: @screen-sm) {
+			margin-left: (@width-md-no-padd - @width-slid-contr) / 2;
+		}
 	}
 	
 	&__control {

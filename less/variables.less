@@ -1,12 +1,21 @@
+// screens 
+@screen-sm: 1400px;//480px;
+@screen-md: 1400px;
+
+
 // widths 
 @width-sm: 320px;
+@width-md: 700px;
 
 
 // container side padding
 @cont-padding: 20px;
+@padding-sm: 20px;
+@padding-md: 40px;
 
 // container width without paddings
-@width-sm-no-padd: @width-sm - (@cont-padding * 2);
+@width-sm-no-padd: @width-sm - (@padding-sm * 2);
+@width-md-no-padd: @width-md - (@padding-md * 2);
 
 // slider controls container width
 @width-slid-contr: 74px;
@@ -22,6 +31,8 @@
 @light-gray: 						#e5e5e5;
 @black:								#000000;
 @silver: 							#e9ebec;
+@light-green: 						#3dc644;
+@light-red: 						#f25b26;
 
 
 // font-family
@@ -34,8 +45,23 @@
 @font-size-md: 18px;
 @font-size-lg: 24px;
 
+@font-size-big: 40px;
+
+@fs-xxxs: 12px;
+@fs-xxs: 14px;
+@fs-xs: 16px;
+@fs: 18px;
+@fs-l: 20px;
+@fs-xl: 24px;
+@fs-xxl: 30px;
+@fs-xxxl: 40px;
+@fs-large: 50px;
+
+
+
 
 // line-heights
+@lh-auto: 1.2;
 @line-height: 18px;
 @line-height-md: 24px;
 @line-height-lg: 32px;
@@ -48,3 +74,5 @@
 
 @border-width-input: 2px;
 @border-radius: 2px;
+
+@border: @border-width-input solid @gray;
