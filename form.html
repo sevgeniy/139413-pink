@@ -11,9 +11,11 @@
 		<div class="page-header__menu-wrapper">
 			<div class="page-header__top">
 				<div class="logo">
-					<a class="logo__link" href="index.html"><img class="logo__image" src="" width="" height="" alt="лого"></a>
+					<a class="logo__link" href="index.html">
+						<!-- <img class="logo__image" src="img/logotype-white-mobile.svg" alt="лого"> -->
+					</a>
 				</div>
-				<a class="menu-toggle" href="#">Menu</a>
+				<a class="menu-toggle" href="#"><img src="img/menu-burger.svg" alt="Меню бургер"></a>
 			</div>
 			<nav class="main-nav">
 				<ul class="main-nav__list">
@@ -30,23 +32,23 @@
 		<div class="page-main__inner page-main__inner--form">
 			<p class="page-main__description">Поделитесь своей историей и получите шанс выиграть ценный приз &ndash; 1000 миль на вашу бонусную карту!</p>
 			<form class="form" action="#" method="post">
-				<div class="form__wrapper">
-					<div class="form__container">
-						<div class="form__fields-wrapper">
-							<label class="form__label" for="firstname">Имя:</label>
-							<input class="form__field" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя" autocomplete="off" required>
+				<div class="personal personal__wrapper">
+					<div class="personal__container">
+						<div class="personal__fields-wrapper">
+							<label class="personal__label" for="firstname">Имя:</label>
+							<input class="personal__field" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя" autocomplete="off" required>
 						</div>
-						<div class="form__fields-wrapper">
-							<label class="form__label" for="lastname">Фамилия:</label>
-							<input class="form__field" id="lastname" name="lastname" type="text" placeholder="Укажите фамилию" autocomplete="off" required>
+						<div class="personal__fields-wrapper">
+							<label class="personal__label" for="lastname">Фамилия:</label>
+							<input class="personal__field" id="lastname" name="lastname" type="text" placeholder="Укажите фамилию" autocomplete="off" required>
 						</div>
-						<div class="form__fields-wrapper">
-							<label class="form__label" for="patronymic">Отчество:</label>
-							<input class="form__field" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже" autocomplete="off" required>
+						<div class="personal__fields-wrapper">
+							<label class="personal__label" for="patronymic">Отчество:</label>
+							<input class="personal__field" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже" autocomplete="off" required>
 						</div>
 					</div>
 				</div>
-				<div class="form__wrapper form__wrapper--bg-gray">
+				<div class="application form__wrapper">
 					<fieldset class="form__fieldset">
 						<legend class="form__title">С каким приложением путешествовали?</legend>
 						<div class="form__fields-wrapper form__fields-wrapper--radio">
@@ -60,28 +62,28 @@
 						</div>
 					</fieldset>
 				</div>
-				<div class="form__wrapper">
-					<fieldset class="form__fieldset">
-						<legend class="form__title form__title--required">Когда вы путешествовали?</legend>
-						<div class="form__fields-wrapper form__fields-wrapper--ta-center">
-							<input class="form__field form__field--before-label" type="text" id="departure" name="departure" value="1 апреля 2015">
-							<label class="form__label form__label--after-field" for="departure">Дата выезда</label>
+				<div class="traveldates traveldates__wrapper">
+					<fieldset class="traveldates__fieldset">
+						<legend class="traveldates__title traveldates__title--required">Когда вы путешествовали?</legend>
+						<div class="traveldates__fields-wrapper traveldates__fields-wrapper--ta-center">
+							<input class="traveldates__field traveldates__field--before-label" type="text" id="departure" name="departure" value="1 апреля 2015">
+							<label class="traveldates__label traveldates__label--after-field" for="departure">Дата выезда</label>
 						</div>
-						<div class="form__fields-wrapper form__fields-wrapper--ta-center">
+						<div class="traveldates__fields-wrapper traveldates__fields-wrapper--ta-center">
 							<div class="counter">
 								<button class="counter__btn">-</button>
 								<input class="counter__field" type="text" id="period" name="period" value="10 дней">
 								<button class="counter__btn counter__btn--right">+</button>
 							</div>
-							<label class="form__label form__label--after-field" for="period">Продолжительность</label>
+							<label class="traveldates__label traveldates__label--after-field" for="period">Продолжительность</label>
 						</div>
-						<div class="form__fields-wrapper form__fields-wrapper--ta-center">
-							<input class="form__field form__field--before-label" type="text" id="arrival" name="arrival" value="1 апреля 2015" readonly>
-							<label class="form__label form__label--after-field" for="arrival">Дата возвращения</label>
+						<div class="traveldates__fields-wrapper traveldates__fields-wrapper--ta-center">
+							<input class="traveldates__field traveldates__field--before-label" type="text" id="arrival" name="arrival" value="1 апреля 2015" readonly>
+							<label class="traveldates__label traveldates__label--after-field" for="arrival">Дата возвращения</label>
 						</div>
 					</fieldset>
-				</div>
-				<div class="form__wrapper form__wrapper--bg-gray">
+				</div>				
+				<div class="travelers form__wrapper">
 					<fieldset class="form__fieldset">
 						<legend class="form__title">Количество попутчиков</legend>
 						<div class="form__fields-wrapper">
@@ -91,29 +93,30 @@
 								<button class="counter__btn counter__btn--right counter__btn--white">+</button>
 							</div>
 						</div>
-						<div class="form__deco-line"></div>
 						<section class="friends">
 							<div class="friend">
 								<div class="friend__number">
 									<div class="friend__number-label">№</div>
 									<div class="friend__number-field">1</div>
 								</div>
+								<div class="friend__delete">Удалить</div>
 								<div class="friend__data">
 									<div class="friend__data-wrapper">
 										<label class="friend__data-label" for="friend1_name">Имя:</label>
 										<input class="friend__data-field friend__data-field--no-left-border-radius" type="text" id="friend1_name" name="friend1_name" placeholder="Введите ваше имя" required>
-									</div>
+									</div>									
 									<div class="friend__data-wrapper">
 										<label class="friend__data-label" for="friend1_nickname">Прозвище:</label>
 										<input class="friend__data-field" type="text" id="friend1_nickname" name="friend1_nickname" placeholder="Ну как же без этого!">
 									</div>
-								</div>
+								</div>								
 							</div>
 							<div class="friend">
 								<div class="friend__number">
 									<div class="friend__number-label">№</div>
 									<div class="friend__number-field">2</div>
 								</div>
+								<div class="friend__delete">Удалить</div>
 								<div class="friend__data">
 									<div class="friend__data-wrapper">
 										<label class="friend__data-label" for="friend2_name">Имя:</label>
@@ -128,7 +131,7 @@
 						</section>
 					</fieldset>
 				</div>
-				<div class="form__wrapper">
+				<div class="achives form__wrapper">
 					<fieldset class="form__fieldset">
 						<legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
 						<ul class="form__list">
@@ -153,7 +156,7 @@
 						</ul>
 					</fieldset>
 				</div>
-				<div class="form__wrapper form__wrapper--bg-gray">
+				<div class="photos form__wrapper">
 					<fieldset class="form__fieldset">
 						<legend  class="form__title form__title--required">Ваши фотографии из поездки</legend>
 						<input class="form__upload-btn" type="file" id="upload_image" name="upload_image">
@@ -171,41 +174,41 @@
 								<figcaption class="photo-item__caption">IMG-2.JPG</figcaption>
 							</figure>
 							<figure class="photo-item">
-								<img class="photo-item__image" src="" alt="IMG-1.JPG" width="68" height="68">
+								<img class="photo-item__image" src="" alt="IMG-1.JPG">
 								<button class="photo-item__delete-btn">+</button>
 								<figcaption class="photo-item__caption">IMG-3.JPG</figcaption>
 							</figure>
 							<figure class="photo-item">
-								<img class="photo-item__image" src="" alt="IMG-1.JPG" width="68" height="68">
+								<img class="photo-item__image" src="" alt="IMG-1.JPG">
 								<button class="photo-item__delete-btn">+</button>
 								<figcaption class="photo-item__caption">IMG-4.JPG</figcaption>
 							</figure>
 							<figure class="photo-item">
-								<img class="photo-item__image" src="" alt="IMG-1.JPG" width="68" height="68">
+								<img class="photo-item__image" src="" alt="IMG-1.JPG">
 								<button class="photo-item__delete-btn">+</button>
 								<figcaption class="photo-item__caption">IMG-5.JPG</figcaption>
 							</figure>
 							<figure class="photo-item">
-								<img class="photo-item__image" src="" alt="IMG-1.JPG" width="68" height="68">
+								<img class="photo-item__image" src="" alt="IMG-1.JPG">
 								<button class="photo-item__delete-btn">+</button>
 								<figcaption class="photo-item__caption">IMG-6.JPG</figcaption>
 							</figure>
 							<figure class="photo-item">
-								<img class="photo-item__image" src="" alt="IMG-1.JPG" width="68" height="68">
+								<img class="photo-item__image" src="" alt="IMG-1.JPG">
 								<button class="photo-item__delete-btn">+</button>
 								<figcaption class="photo-item__caption">IMG-7.JPG</figcaption>
 							</figure>
 							<figure class="photo-item">
-								<img class="photo-item__image" src="" alt="IMG-1.JPG" width="68" height="68">
+								<img class="photo-item__image" src="" alt="IMG-1.JPG">
 								<button class="photo-item__delete-btn">+</button>
 								<figcaption class="photo-item__caption">IMG-8.JPG</figcaption>
 							</figure>
 						</div>
 					</fieldset>					
 				</div>
-				<div class="form__wrapper">
+				<div class="form__wrapper clearfix">
 					<button class="submit-btn" type="submit">Отправить форму</button>
-					<p><span class="form__required">*</span> &ndash; обязательные поля</p>
+					<p class="form__required"><span>*</span> &ndash; обязательные поля</p>
 				</div>
 			</form>
 			<div class="popup-failure">
@@ -225,16 +228,24 @@
 		</div>
 	</main>
 	<footer class="page-footer">
-		<div class="logo logo--footer">
-			<a class="logo__link" href="index.html"><img class="logo__image .logo__image--footer" src="" alt="Лого Pink"></a>
+		<div class="page-footer__item">
+			<div class="logo logo--footer">
+				<a class="logo__link" href="index.html">
+					<!-- <img class="logo__image .logo__image--footer" src="img/logotype-blue-tablet.svg" alt="Лого Pink"> -->
+				</a>
+			</div>
 		</div>
-		<div class="social-links">
-			<a class="social-links__item social-links__item--tw" href="#">Twitter</a>
-			<a class="social-links__item social-links__item--fb" href="#">Facebook</a>
-			<a class="social-links__item social-links__item--ytb" href="#">Youtube</a>
+		<div class="page-footer__item">
+			<div class="social-links">
+				<a class="social-links__item social-links__item--tw" href="#">Twitter</a>
+				<a class="social-links__item social-links__item--fb" href="#">Facebook</a>
+				<a class="social-links__item social-links__item--ytb" href="#">Youtube</a>
+			</div>
 		</div>
-		<div class="page-footer__copyright">
-			<span class="page-footer__copyright-text">Разработано</span><a class="page-footer__copyright-link" href="#">HtmlAcademy</a>
+		<div class="page-footer__item">
+			<div class="page-footer__copyright">
+				<span class="page-footer__copyright-text">Разработано</span><a class="page-footer__copyright-link" href="#">HtmlAcademy</a>
+			</div>
 		</div>
 	</footer>
 </body>

@@ -2,13 +2,66 @@
 	display: block;
 	float: left;
 	width: 40px;
-	margin-left: 22px;
 	line-height: @font-size;
+	text-align: center;
+
+	@media (max-width: @screen-sm) {
+		width: 74px;
+		height: 23px;
+		margin-left: 20px;
+		background: url("../img/logotype-white-mobile.svg") center center no-repeat;
+	}
+
+	@media (min-width: @screen-sm) {
+		width: 145px;
+		height: 40px;
+		margin-left: 40px;
+		background: url("../img/logotype-white-tablet.svg") center center no-repeat;		
+	}
+
+	&__link {
+		display: block;
+		font-size: 0;
+
+		@media (max-width: @screen-sm) {
+			width: 74px;
+			height: 23px;
+		}
+
+		@media (min-width: @screen-sm) {
+			width: 145px;
+			height: 40px;
+		}
+	}
 
 	&--footer {
 		float: none;
-		margin: 0 auto;
-		margin-bottom: 40px;
+		// width: 145px;
+		// margin: 0 auto;
+		margin-left: 0;
+		// margin-bottom: 40px;
+
+		@media (max-width: @screen-sm) {
+			width: 145px;
+			height: 40px;
+			margin: 0 auto;
+			background: url("../img/logotype-blue-tablet.svg") center center no-repeat;
+		}
+
+		@media (min-width: @screen-sm) {
+			// width: 145px;
+			// height: 40px;
+			background: url("../img/logotype-blue-tablet.svg") center center no-repeat;		
+		}
+	}
+
+	&__image {
+		display: block;
+
+		&--footer {
+			width: 146.3px;
+			height: 40.375px;	
+		}		
 	}
 }
 

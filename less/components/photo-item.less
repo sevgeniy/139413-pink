@@ -2,23 +2,47 @@
 	position: relative;
 	display: inline-block;
 	margin: 0;
-	margin-right: 36px;
 	padding: 0;
 	vertical-align: middle;
 	text-align: left;
 
+	@media (max-width: @screen-sm) {
+		margin-right: 36px;
+	}
+
+	@media (min-width: @screen-sm) {
+		margin-right: 69px;
+	}
+
+	&__image {
+		@media (max-width: @screen-sm) {
+			width: 68px;
+			height: 68px;
+		}
+
+		@media (min-width: @screen-sm) {
+			width: 120px;
+			height: 120px;			
+		}
+	}
+
 	&__caption {
 		margin-bottom: 22px;
-		font-size: @font-size-sm;
-		line-height: @line-height;
+
+		@media (max-width: @screen-sm) {
+			font-size: @fs-xxxs;
+			line-height: 18/12;
+		}
+
+		@media (min-width: @screen-sm) {
+			font-size: @fs-xxs;
+			line-height: 25.7/14;
+		}
 	}
 
 	&__delete-btn {
 		position: absolute;
-		top: -15px;
-		right: -15px;
-		width: 31px;
-		height: 31px;
+		
 		font-size: 0;
 		background-color: @white;
 		color: @light-gray;
@@ -27,22 +51,50 @@
 		cursor: pointer;
 		transform: rotate(45deg);
 
+		@media (max-width: @screen-sm) {
+			width: 31px;
+			height: 31px;
+			top: -15px;
+			right: -15px;
+		}
+
+		@media (min-width: @screen-sm) {
+			width: 55px;
+			height: 55px;
+			top: -27px;
+			right: -26px;
+		}
+
 		&:before {
 			content: "";
 			display: block;			
-			width: 13px;
 			height: 0;
 			border: 1px solid @light-gray;
 			transform: rotate(180deg) translate(1px, -1px);
+
+			@media (max-width: @screen-sm) {
+				width: 13px;				
+			}
+
+			@media (min-width: @screen-sm) {
+				width: 36px;
+			}
 		}
 
 		&:after {
 			content: "";
 			display: block;			
-			width: 13px;
 			height: 0;
 			border: 1px solid @light-gray;
 			transform: rotate(90deg) translate(-1px, 1px);
+
+			@media (max-width: @screen-sm) {
+				width: 13px;				
+			}
+
+			@media (min-width: @screen-sm) {
+				width: 36px;
+			}
 		}
 	}
 
