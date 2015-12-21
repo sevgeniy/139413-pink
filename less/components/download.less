@@ -1,13 +1,13 @@
 .download {
 	.container();
 
-	@media (max-width: @screen-sm) {
+	@media all and (max-width: @screen-xs) {
 		padding-top: 27px;
 		padding-bottom: 35px;
 		background-color: @blue;
 	}					
 	
-	@media (min-width: @screen-sm) {
+	@media all and (min-width: @screen-md) {
 		float: left;
 		width: 300px;
 		padding-top: 40px;
@@ -25,11 +25,11 @@
 		color: @white;
 		text-decoration: none;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			margin-bottom: 31px;
 		}					
 		
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			margin-bottom: 44px;
 		}
 	}	
@@ -38,18 +38,34 @@
 	&__images {
 		font-size: 0;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			padding-bottom: 28px;
 		}					
 		
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			padding-bottom: 38px;
 		}
 	}
 
 	&__image {
 		display: inline-block;
+		vertical-align: bottom;
 		margin-right: 36px;
+
+		&--apple {
+			width: 46px;
+			height: 57px;
+		}
+
+		&--android {
+			width: 42px;
+			height: 47px;
+		}
+
+		&--microsoft {
+			width: 44px;
+			height: 42px;
+		}
 
 		&:last-child {
 			margin-right: 0;
@@ -57,12 +73,12 @@
 	}
 
 	&__text {
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			font-size: 14px;
 			line-height: 24/14;
 		}					
 		
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			font-size: 18px;
 			line-height: 24/18;
 		}

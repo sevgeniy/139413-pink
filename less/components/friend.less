@@ -1,72 +1,112 @@
 .friend {
 	.clearfix();
+	position: relative;
 
 	&__number {
-		display: block;
-		float: left;
+		display: inline-block;
+		vertical-align: middle;
+
+		@media all and (max-width: @screen-xs) {
+			position: absolute;
+			left: 0;
+		}
+
+		@media all and (min-width: @screen-md) {
+			margin-right: 20px;
+		}
 	}
 
 	&__number-label {
 		.form__label();
 		width: 61px;
 		margin-left: 0;
-		margin-bottom: 8px;
+		text-align: left;
 	}
 
 	&__number-field {
-		width: 61px;
-		height: 41px;
+		width: 66px;
+		height: 68px;
 		padding-top: 18px;
 		font-size: @font-size-md;
+		text-align: center;
 		background-color: @gray;
 		border: 2px solid @light-gray;
-		border-right: none;
 		border-radius: @border-radius 0 0 @border-radius;
+		box-sizing: border-box;
+
+		// @media all and (max-width: @screen-xs) {
+		// 	border-right: none;
+		// }
 	}
 
 	&__data {
-		float: right;
-
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			width: 50%;
-		}					
-		@media (min-width: @screen-sm) {
+		}
+		@media all and (min-width: @screen-md) {
 			width: 50%;
 		}
 	}
 
 	&__data-wrapper {
-		
+		@media all and (max-width: @screen-xs) {
+			
+		}
+		@media all and (min-width: @screen-md) {
+			display: inline-block;
+			vertical-align: middle;
+		}	
+	}
+
+	&__data-wrapper:nth-of-type(3) {
+		@media all and (min-width: @screen-md) {
+			transform: translate(103px, 0);
+		}
 	}
 
 	&__data-label {
 		.form__label();
-		display: block;
+		// display: block;
 		text-align: left;
 	}
 
 	&__data-field {
 		.form__field();
-		// margin-bottom: 17px;
-		// padding: 19px 22px;
-		font-size: @font-size;
-		// border: 2px solid @light-gray;
-		// border-radius: @border-radius;
+		font-size: @fs;
+
+		@media all and (max-width: @screen-xs) {
+			width: 100%;
+		}					
+		@media all and (min-width: @screen-md) {
+			width: 90%;
+		}
 
 		&--no-left-border-radius {
 			border-radius: 0 @border-radius @border-radius 0;
 		}
 	}
 
+	&__data-field:nth-child(2) {
+		@media all and (max-width: @screen-xs) {
+			padding-left: 80px;
+		}		
+	}
+
 	&__delete {
-		@media (max-width: @screen-sm) {
+		position: absolute;
+		top: 55px;
+		right: 0;
+		font-size: @fs-xxs;
+		line-height: @lh-auto;
+		text-decoration: none;
+		color: @blue;
+
+		@media all and (max-width: @screen-xs) {
 			display: none;
 		}
 
-		@media (min-width: @screen-sm) {
-			display: block;
-			float: right;
-			width: 20%;
+		@media all and (min-width: @screen-md) {
+			width: 10%;
 		}	
 	}
 }

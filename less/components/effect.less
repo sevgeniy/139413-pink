@@ -1,0 +1,73 @@
+.effect {
+	display: none;
+	text-align: left;
+	font-weight: @fw-regular;
+
+	.container();
+	.container--white();
+	.clearfix();
+
+	@media all and (min-width: @screen-md) {
+		display: block;		
+		padding-top: 56px;
+		
+		&__logo {
+			float: left;
+			width: 262px;
+			position: relative;
+			
+			&:after {
+				content: "24";
+				position: absolute;
+				display: block;
+				top: 64px;
+				left: 24px;
+				width: 192px;
+				height: 192px;
+				font-size: 104.6px;
+				line-height: 192px;
+				font-weight: bold;
+				background-color: @white;
+				color: @red;
+				text-align: center;
+				border: 11px solid @red;
+				border-radius: 50%;
+			}
+		}
+
+		&__image {
+			width: 262px;
+			height: 302px;
+
+			path {
+				fill: @timer-color;
+			}
+		}
+
+		&__container {
+			float: right;
+			width: 310px;
+			padding-left: 10px;
+		}
+
+		&__title {
+			width: 170px;
+			margin-top: 42px;
+			font-size: @fs-xxxl;
+			line-height: 36/30;
+			font-weight: bold;
+			color: @black;
+		}
+
+		&__description {
+			font-size: @fs-xxs;
+			line-height: 24/14;
+		}
+
+		&__link {
+			font-size: @fs-xxs;
+			line-height: 24/14;
+			color: @red;
+		}
+	}
+}

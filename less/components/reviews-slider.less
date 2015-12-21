@@ -4,12 +4,12 @@
 	padding-top: 44px;
 	padding-bottom: 27px;
 
-	@media (max-width: @screen-sm) {
+	@media all and (max-width: @screen-xs) {
 		padding-top: 44px;
 		padding-bottom: 27px;
 	}
 
-	@media (min-width: @screen-sm) {
+	@media all and (min-width: @screen-md) {
 		padding-top: 82px;
 		padding-bottom: 27px;
 	}
@@ -24,11 +24,11 @@
 		display: none;
 		padding-bottom: 40px;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			width: @width-sm-no-padd;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			width: @width-md-no-padd;
 		}
 	}
@@ -36,11 +36,11 @@
 	&__slide-title-top {
 		display: none;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			display: block;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			display: none;
 		}
 	}
@@ -52,11 +52,11 @@
 			margin-bottom: 0;
 		}
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			display: none;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			display: block;
 		}
 	}
@@ -65,18 +65,18 @@
 		margin-bottom: 16px;
 		font-weight: bold;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			font-size: @fs;
 			line-height: 30/18;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			font-size: @fs-l;
 			line-height: 1.5;
 		}
 
 		&-descr {
-			@media (min-width: @screen-sm) {
+			@media all and (min-width: @screen-md) {
 				font-size: @fs-xs;
 				line-height: 30/14;
 			}			
@@ -92,12 +92,12 @@
 			content:"\00bb";
 		}
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			font-size: @fs-xxs;
 			line-height: 30/14;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			font-size: @fs;
 			line-height: 30/18;
 		}
@@ -112,11 +112,11 @@
 		margin-left: (@width-sm-no-padd - @width-slid-contr) / 2;
 		font-size: 0;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			margin-left: (@width-sm-no-padd - @width-slid-contr) / 2;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			margin-left: (@width-md-no-padd - @width-slid-contr) / 2;
 		}
 	}

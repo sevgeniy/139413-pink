@@ -13,12 +13,12 @@
 		background: @gray url("../img/triangle-white.svg") left top no-repeat;
 		background-size: 100% 100%;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			width: @width-sm;
 			height: @width-sm / 10;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			width: @width-md;
 			height: 56px;
 		}	
@@ -29,11 +29,11 @@
 		left: 20px;
 		font-size: 0;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			width: @width-sm-no-padd * 3;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			.container();
 			width: @width-md-no-padd;
 		}
@@ -43,28 +43,28 @@
 		display: inline-block;
 		padding-bottom: 40px;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			width: @width-sm-no-padd;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			width: @width-md-no-padd / 4;
 		}
 
 		&:first-child {
-			@media (max-width: @screen-sm) {
+			@media all and (max-width: @screen-xs) {
 				display: none;
 			}
 		}
 		
 		&:first-child .price-table__column-header {
-			@media (min-width: @screen-sm) {
+			@media all and (min-width: @screen-md) {
 				visibility: hidden;
 			}
 		}
 		
 		&:first-child .price-table__option-name {
-			@media (min-width: @screen-sm) {
+			@media all and (min-width: @screen-md) {
 				display: block;
 			}
 		}
@@ -83,46 +83,74 @@
 	}
 
 	&__column-header {
+		height: 67px;
 		padding-top: 19px;
 		padding-bottom: 22px;
 		background-color: @blue;
 		color: @white;
+		overflow: hidden;
+
+		&--hit:after {
+			width: 150px;
+		    content: "ХИТ";
+		    display: block;
+		    font-size: 14px;
+		    line-height: 30/14;
+		    background-color: @red;
+		    color: @white;
+		    transform: rotate(-45deg) translate(20px, -92px);
+		    font-weight: bold;
+		}
 	}
 
 	&__rate-name {
 		margin-bottom: 7px;
 		font-weight: bold;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			font-size: @fs;
 			line-height: 30/18;
 		}					
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			font-size: @fs-xs;
 			line-height: 30/16;
 		}
+
+		// &--hit:after {
+		// 	width: 150px;
+		//     content: "ХИТ";
+		//     display: block;
+		//     font-size: 14px;
+		//     line-height: 30/14;
+		//     background-color: @red;
+		//     color: #ffffff;
+		//     transform: rotate(-45deg) translate(-5px, -62px);
+		//     font-weight: bold;
+		// }
 	}
 
 	&__rate-price {
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			font-size: @fs-xl;
 			line-height: 30/24;
 		}					
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			font-size: @fs;
 			line-height: 30/18;
 		}
 	}
 
 	&__option {
-		.clearfix();		
-		padding-top: 18px;
+		.clearfix();	
+		height: 45px;	
+		padding-top: 10px;
 		padding-bottom: 16px;
 		font-size: @font-size;
 		line-height: @line-height-lg-2;
 		background-color: @white;
 		color: @dark-blue;
 		border: 1px solid @light-gray;
+		box-sizing: border-box;
 	}
 
 	&__option-name {
@@ -133,26 +161,36 @@
 		line-height: 30/14;
 		text-align: left;
 		
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			display: none;
 		}
 	}
 
 	&__option-value {
 		float: right;
-		width: 30px;
+		width: 31px;
+		height: 22px;
 		margin-right: 18px;
 		font-size: 0;
-		background: url("../img/yes-green.svg") center center no-repeat;
-
-		&--no {
-			background: url("../img/no-red.svg") center center no-repeat;
+		
+		@media all and (min-width: @screen-md) {
+			margin-right: 57px;
 		}
 
-		// @media (min-width: @screen-sm) {
-		// 	float: none;
-		// 	margin: 0 auto;
-		// }
+		&--no {
+			width: 27px;
+			height: 27px;
+		}
+	}
+
+	&__option-image {
+		width: 31px;
+		height: 22px;
+
+		&--no {
+			width: 27px;
+			height: 27px;
+		}
 	}
 
 	input {
@@ -163,11 +201,12 @@
 		width: @width-slid-contr;	
 		font-size: 0;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			margin-left: (@width-sm - @width-slid-contr) / 2;
+			padding-bottom: 20px;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			display: none;
 		}	
 	}
@@ -207,7 +246,7 @@
 		border-color: @dark-blue;
 	}
 
-	@media (max-width: @screen-sm) {
+	@media all and (max-width: @screen-xs) {
 		#price-btn-1:checked ~ &__wrapper {
 			transform: translate(@cont-padding, 0);
 		}
@@ -220,5 +259,12 @@
 			transform: translate(@cont-padding - (@width-sm-no-padd * 2), 0);
 		}
 	}
-	
+}
+
+#yes path {
+	fill: @green;
+}
+
+#no path {
+	fill: @light-red;
 }

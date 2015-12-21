@@ -5,12 +5,12 @@
 	padding-right: 20px;
 	padding-left: 20px;
 
-	@media (max-width: @screen-sm) {
+	@media all and (max-width: @screen-xs) {
 		padding-top: 45px;
 		padding-bottom: 36px;
 	}					
 	
-	@media (min-width: @screen-sm) {
+	@media all and (min-width: @screen-md) {
 		padding-top: 58px;		
 		padding-bottom: 53px;
 	}
@@ -18,12 +18,12 @@
 	&__text {
 		line-height: @lh-auto;
 
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			font-size: @fs-xl;
 			margin-bottom: 34px;
 		}					
 		
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			font-size: @fs-xxxl;			
 		}
 	}
@@ -31,7 +31,7 @@
 	&__text:last-child {
 		margin-bottom: 0;
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			width: 340px;
 			margin: 0 auto;
 		}
@@ -42,14 +42,14 @@
 	.container();
 	.container--gray();
 
-	@media (max-width: @screen-sm) {
+	@media all and (max-width: @screen-xs) {
 		background: url("../img/iphone-screen-tablet-3@1x.png") center bottom no-repeat,
 					@gray url("../img/triangle-white.svg") left top no-repeat;
 		background-size: 158px 278px, 100%  10%;
 		padding-bottom: 278px;
 	}
 
-	@media (min-width: @screen-sm) {
+	@media all and (min-width: @screen-md) {
 		.clearfix();
 		background: url("../img/iphone-screen-tablet-3@1x.png") @padding-md bottom no-repeat,
 					@gray url("../img/triangle-white.svg") left top no-repeat;
@@ -58,14 +58,14 @@
 	}	
 
 	&__container {
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			float: right;
 			width: 320px;
 		}
 	}
 	
 	&__item {
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			text-align: left;
 		}
 	}
@@ -89,76 +89,6 @@
 	}
 }
 
-.effect {
-	display: none;
-	text-align: left;
-	font-weight: @fw-regular;
-
-	.container();
-	.container--white();
-	.clearfix();
-
-	@media (min-width: @screen-sm) {
-		display: block;		
-		padding-top: 56px;
-		
-		&__logo {
-			float: left;
-			width: 262px;
-			position: relative;
-			
-			&:after {
-				content: "24";
-				position: absolute;
-				display: block;
-				top: 64px;
-				left: 24px;
-				width: 192px;
-				height: 192px;
-				font-size: 104.6px;
-				line-height: 192px;
-				font-weight: bold;
-				background-color: @white;
-				color: @red;
-				text-align: center;
-				border: 11px solid @red;
-				border-radius: 50%;
-			}
-		}
-
-		&__image {
-			width: 262px;
-			height: 302px;
-		}
-
-		&__container {
-			float: right;
-			width: 310px;
-			padding-left: 10px;
-		}
-
-		&__title {
-			width: 170px;
-			margin-top: 42px;
-			font-size: @fs-xxxl;
-			line-height: 36/30;
-			font-weight: bold;
-			color: @black;
-		}
-
-		&__description {
-			font-size: @fs-xxs;
-			line-height: 24/14;
-		}
-
-		&__link {
-			font-size: @fs-xxs;
-			line-height: 24/14;
-			color: @red;
-		}
-	}
-}
-
 .main-footer {
 	.container();
 	.container--white();
@@ -166,29 +96,29 @@
 	padding-top: 48px;
 	padding-bottom: 10px;
 
-	@media (max-width: @screen-sm) {
+	@media all and (max-width: @screen-xs) {
 		padding-top: 48px;
 	}
 
-	@media (min-width: @screen-sm) {
+	@media all and (min-width: @screen-md) {
 		padding-top: 55px;
 	}	
 
 	.page-footer {
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			display: none;
 		}
 	}
 	
 
 	&__title {
-		@media (max-width: @screen-sm) {
+		@media all and (max-width: @screen-xs) {
 			padding: 0 10px;
 			padding-bottom: 45px;
 			font-size: @fs-xl;
 		}
 
-		@media (min-width: @screen-sm) {
+		@media all and (min-width: @screen-md) {
 			padding: 0 120px;
 			padding-bottom: 55px;
 			font-size: @fs-xxxl;
@@ -199,21 +129,21 @@
 		padding-bottom: 32px;
 	
 		&:nth-child(1) {
-			@media (min-width: @screen-sm) {
+			@media all and (min-width: @screen-md) {
 				float: left;
 				width: 50%;
 			}	
 		}
 
 		&:nth-child(2) {
-			@media (min-width: @screen-sm) {
+			@media all and (min-width: @screen-md) {
 				float: right;
 			 	width: 50%;
 			}	
 		}
 
 		&:nth-child(3) {
-			@media (min-width: @screen-sm) {
+			@media all and (min-width: @screen-md) {
 				padding-left: 180px;
 				padding-right: 180px;
 			}	
@@ -240,7 +170,9 @@
 	}
 
 	&__map-container {
-		background-color: @gray;
+		width: 100%;
+		height: 200px;
+		background: @gray url("../img/map.jpg") center center no-repeat;
 
 		&:before {
 			content: "";
@@ -251,13 +183,13 @@
 			background: @gray url("../img/triangle-white-footer.svg") center top no-repeat;
 			background-size: 100% 100%;
 
-			@media (max-width: @screen-sm) {
+			@media all and (max-width: @screen-xs) {
 				width: @width-sm;
 				height: @width-sm / 10;
 				margin-bottom: -(@width-sm / 10);
 			}
 
-			@media (min-width: @screen-sm) {
+			@media all and (min-width: @screen-md) {
 				width: @width-md;
 				height: 73px;
 				margin-bottom: -73px;
