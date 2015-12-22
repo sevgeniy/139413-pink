@@ -18,6 +18,11 @@
 		width: @width-md - (@padding-md * 2);
 		padding: 0 @padding-md;
 	}
+
+	@media all and (min-width: @screen-lg) {
+		width: @width-lg - (@padding-lg * 2);
+		padding: 0 @padding-lg;
+	}
 }
 
 .container--p0 {
@@ -29,6 +34,11 @@
 
 	@media all and (min-width: @screen-md) {
 		width: @width-md;
+		padding: 0;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		width: @width-lg;
 		padding: 0;
 	}
 }

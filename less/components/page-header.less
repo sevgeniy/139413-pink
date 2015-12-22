@@ -2,24 +2,82 @@
 	.container();
 	.container--p0();
 
+	// modile
 	@media all and (max-width: @screen-xs) {
 		background: url("../img/background-mobile@1x.jpg") center top no-repeat;
 	}
 
-	@media all and (min-width: @screen-md) {
+	@media (-webkit-min-device-pixel-ratio: 2) and (max-width: @screen-xs),
+	       (min-resolution: 2dppx) and (max-width: @screen-xs) {
+		background: url("../img/background-mobile@2x.jpg") center top no-repeat;
+   	}
+
+   	@media (-webkit-min-device-pixel-ratio: 3) and (max-width: @screen-xs),
+	       (min-resolution: 3dppx) and (max-width: @screen-xs) {
+		background: url("../img/background-mobile@3x.jpg") center top no-repeat;
+   	}
+
+	// tablet
+	@media all and (min-width: @screen-xs) {
 		.clearfix();
 		background: url("../img/background-tablet@1x.jpg") center top no-repeat;
 	}
 
+	@media (-webkit-min-device-pixel-ratio: 2) and (min-width: @screen-xs),
+	       (min-resolution: 2dppx) and (min-width: @screen-xs) {
+       	.clearfix();
+		background: url("../img/background-tablet@2x.jpg") center top no-repeat;
+   	}
+
+	// desktop
+   	@media all and (min-width: @screen-lg) {
+		.clearfix();
+		background: url("../img/background-fullsize.jpg") center top no-repeat;
+	}
+
 	&--index {
+		
+		// modile
 		@media all and (max-width: @screen-xs) {
 			background: url("../img/iphone-hand-mobile.png") center 183px no-repeat, 
 						url("../img/background-mobile@1x.jpg") center top no-repeat;
-		}					
-		@media all and (min-width: @screen-md) {
+		}
+
+		@media (-webkit-min-device-pixel-ratio: 2) and (max-width: @screen-xs),
+		       (min-resolution: 2dppx) and (max-width: @screen-xs) {
+			background: url("../img/iphone-hand-mobile@2x.png") center 183px no-repeat, 
+						url("../img/background-mobile@2x.jpg") center top no-repeat;
+	   	}
+
+	   	@media (-webkit-min-device-pixel-ratio: 3) and (max-width: @screen-xs),
+		       (min-resolution: 3dppx) and (max-width: @screen-xs) {
+			background: url("../img/iphone-hand-mobile@3x.png") center 183px no-repeat, 
+						url("../img/background-mobile@3x.jpg") center top no-repeat;
+	   	}
+
+		// tablet
+		@media all and (min-width: @screen-xs) {
 			background: url("../img/iphone-hand-tablet@1x.png") center 184px no-repeat, 
 						url("../img/background-tablet@1x.jpg") center top no-repeat;
 		}
+
+		@media (-webkit-min-device-pixel-ratio: 2) and (min-width: @screen-xs),
+		       (min-resolution: 2dppx) and (min-width: @screen-xs) {
+	       	background: url("../img/iphone-hand-tablet@2x.png") center 184px no-repeat, 
+						url("../img/background-tablet@2x.jpg") center top no-repeat;
+	   	}
+				
+		// desktop
+		@media all and (min-width: @screen-lg) {
+			background: url("../img/iphone-hand-desktop@1x.png") center 184px no-repeat, 
+						url("../img/background-fullsize.jpg") center top no-repeat;
+		}
+
+		@media (-webkit-min-device-pixel-ratio: 2) and (min-width: @screen-lg),
+		       (min-resolution: 2dppx) and (min-width: @screen-lg) {
+	       	background: url("../img/iphone-hand-desktop@2x.png") center 184px no-repeat, 
+						url("../img/background-fullsize.jpg") center top no-repeat;
+	   	}
 	}
 	
 	&__menu-wrapper {
@@ -40,9 +98,13 @@
 			width: @width-sm;
 			padding: 23px 0 21px 0;
 		}					
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			width: @width-md;
 			padding: 27px 0 41px 0;
+		}
+		@media all and (min-width: @screen-lg) {
+			width: @width-lg;
+			padding: 27px 0 43px 0;
 		}
 	}
 
@@ -58,11 +120,20 @@
 			line-height: @lh-auto;
 			font-weight: @fw-light;
 		}					
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			padding-top: 190px;
 			padding-right: 110px;
 			padding-bottom: 86px;
 			padding-left: 110px;	
+			font-size: @fs-large;
+			line-height: @lh-auto;
+			font-weight: @fw-light;
+		}
+		@media all and (min-width: @screen-lg) {
+			padding-top: 190px;
+			padding-right: 110px;
+			padding-bottom: 86px;
+			padding-left: 146px;	
 			font-size: @fs-large;
 			line-height: @lh-auto;
 			font-weight: @fw-light;
@@ -72,7 +143,7 @@
 			@media all and (max-width: @screen-xs) {
 				padding-bottom: 320px;
 			}					
-			@media all and (min-width: @screen-md) {
+			@media all and (min-width: @screen-xs) {
 				width: 240px;
 				padding-top: 212px;
 				padding-right: 380px;
@@ -81,9 +152,17 @@
 				font-size: @fs-xxxl;
 				line-height: @lh-auto;
 			}
+			@media all and (min-width: @screen-lg) {
+				width: 240px;
+				padding-top: 212px;
+				padding-right: 380px;
+				padding-bottom: 0;
+				padding-left: 146px;
+				font-size: @fs-xxxl;
+				line-height: @lh-auto;
+			}
 		}
 	}
-
 	
 }
 
@@ -119,7 +198,7 @@
 		top: 75px;
 		width: @width-sm;
 	}					
-	@media all and (min-width: @screen-md) {
+	@media all and (min-width: @screen-xs) {
 		top: 99px;
 		width: @width-md;		
 	}
@@ -152,8 +231,6 @@
 	}
 }
 
-
-#hamburer #path-1,
-#hamburer #path-1_1_ {
+.hamburer {
 	fill: @white;
 }

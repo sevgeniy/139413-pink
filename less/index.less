@@ -41,15 +41,56 @@
 .features {
 	.container();
 	.container--gray();
-
+	
+	// mobile
 	@media all and (max-width: @screen-xs) {
-		background: url("../img/iphone-screen-tablet-3@1x.png") center bottom no-repeat,
+		background: url("../img/screen-mobile-3.png") center bottom no-repeat,
 					@gray url("../img/triangle-white.svg") left top no-repeat;
 		background-size: 158px 278px, 100%  10%;
 		padding-bottom: 278px;
 	}
 
-	@media all and (min-width: @screen-md) {
+	@media (-webkit-min-device-pixel-ratio: 2) and (max-width: @screen-xs),
+	       (min-resolution: 2dppx) and (max-width: @screen-xs) {
+		background: url("../img/screen-mobile-3.png") center bottom no-repeat,
+					@gray url("../img/triangle-white.svg") left top no-repeat;
+		background-size: 158px 278px, 100%  10%;
+		padding-bottom: 278px;
+   	}
+
+   	@media (-webkit-min-device-pixel-ratio: 3) and (max-width: @screen-xs),
+	       (min-resolution: 3dppx) and (max-width: @screen-xs) {
+		background: url("../img/screen-mobile-3.png") center bottom no-repeat,
+					@gray url("../img/triangle-white.svg") left top no-repeat;
+		background-size: 158px 278px, 100%  10%;
+		padding-bottom: 278px;
+   	}
+	// // mobile
+	// @media all and (max-width: @screen-xs) {
+	// 	background: url("../img/iphone-screen-mobile-3@1x.png") center bottom no-repeat,
+	// 				@gray url("../img/triangle-white.svg") left top no-repeat;
+	// 	background-size: 158px 278px, 100%  10%;
+	// 	padding-bottom: 278px;
+	// }
+
+	// @media (-webkit-min-device-pixel-ratio: 2) and (max-width: @screen-xs),
+	//        (min-resolution: 2dppx) and (max-width: @screen-xs) {
+	// 	background: url("../img/iphone-screen-mobile-3@2x.png") center bottom no-repeat,
+	// 				@gray url("../img/triangle-white.svg") left top no-repeat;
+	// 	background-size: 158px 278px, 100%  10%;
+	// 	padding-bottom: 278px;
+ //   	}
+
+ //   	@media (-webkit-min-device-pixel-ratio: 3) and (max-width: @screen-xs),
+	//        (min-resolution: 3dppx) and (max-width: @screen-xs) {
+	// 	background: url("../img/iphone-screen-mobile-3@3x.png") center bottom no-repeat,
+	// 				@gray url("../img/triangle-white.svg") left top no-repeat;
+	// 	background-size: 158px 278px, 100%  10%;
+	// 	padding-bottom: 278px;
+ //   	}
+
+	// tablet
+	@media all and (min-width: @screen-xs) {
 		.clearfix();
 		background: url("../img/iphone-screen-tablet-3@1x.png") @padding-md bottom no-repeat,
 					@gray url("../img/triangle-white.svg") left top no-repeat;
@@ -57,16 +98,39 @@
 		padding-top: 81px;
 	}	
 
+	@media (-webkit-min-device-pixel-ratio: 2) and (min-width: @screen-xs),
+	       (min-resolution: 2dppx) and (min-width: @screen-xs) {
+   		.clearfix();
+		background: url("../img/iphone-screen-tablet-3@2x.png") @padding-md bottom no-repeat,
+					@gray url("../img/triangle-white.svg") left top no-repeat;
+		background-size: 268px 481px, 100%  100% * 55/700;
+		padding-top: 81px;
+   	}
+
+	// desktop
+	@media all and (min-width: @screen-lg) {
+		.clearfix();
+		background: @gray url("../img/triangle-white.svg") left top no-repeat;
+		background-size: 100%  100% * 55/700;
+		padding-top: 81px;
+	}	
+
 	&__container {
-		@media all and (min-width: @screen-md) {
+		@media (min-width: @screen-xs) and (max-width: @screen-lg) {
 			float: right;
 			width: 320px;
 		}
 	}
 	
 	&__item {
-		@media all and (min-width: @screen-md) {
+		@media (min-width: @screen-xs) and (max-width: @screen-lg) {
 			text-align: left;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			display: inline-block;
+			vertical-align: top;
+			width: 300px;			
 		}
 	}
 
@@ -80,12 +144,19 @@
 	&__item-text {
 		margin-bottom: 35px;
 		font-size: @fs-xxs;
-		line-height: 24/14;		
+		line-height: 24/14;
+
+		@media all and (min-width: @screen-lg) {
+			padding: 0 30px; 
+		}
 	}
 
-	&__image {
-		display: block;
-		margin: 0 auto;
+	&__item-image {
+		display: none;
+		@media all and (min-width: @screen-lg) {
+			display: block;
+			margin: 0 auto;
+		}
 	}
 }
 
@@ -100,9 +171,26 @@
 		padding-top: 48px;
 	}
 
-	@media all and (min-width: @screen-md) {
+	@media all and (min-width: @screen-xs) {
 		padding-top: 55px;
-	}	
+	}
+
+	@media all and (min-width: @screen-lg) {
+		padding-top: 75px;
+	}
+
+
+	&__container {
+		@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
+			.clearfix();
+		}
+
+		@media all and (min-width: @screen-lg) {
+			display: inline-block;
+			vertical-align: middle;
+			font-size: 0;
+		}
+	}
 
 	.page-footer {
 		@media all and (max-width: @screen-xs) {
@@ -118,8 +206,14 @@
 			font-size: @fs-xl;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			padding: 0 120px;
+			padding-bottom: 55px;
+			font-size: @fs-xxxl;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			padding: 0 200px;
 			padding-bottom: 55px;
 			font-size: @fs-xxxl;
 		}
@@ -129,31 +223,48 @@
 		padding-bottom: 32px;
 	
 		&:nth-child(1) {
-			@media all and (min-width: @screen-md) {
+			@media all and (min-width: @screen-xs) and (max-width: @screen-lg){
 				float: left;
 				width: 50%;
 			}	
 		}
 
 		&:nth-child(2) {
-			@media all and (min-width: @screen-md) {
+			@media all and (min-width: @screen-xs) and (max-width: @screen-lg){
 				float: right;
 			 	width: 50%;
-			}	
+			}
+
+			@media all and (min-width: @screen-lg) {
+				transform: translate(30%, 0);
+			}
 		}
 
 		&:nth-child(3) {
-			@media all and (min-width: @screen-md) {
-				padding-left: 180px;
-				padding-right: 180px;
+			@media all and (min-width: @screen-xs) and (max-width: @screen-lg){
+				// padding-left: 180px;
+				// padding-right: 180px;
+				width: 100%;
 			}	
+
+			@media all and (min-width: @screen-lg) {
+				margin-right: 0;
+				transform: translate(-30%, 0);
+			}
+		}
+
+		@media all and (min-width: @screen-lg) {
+			display: inline-block;
+			vertical-align: middle;
+			width: 30%;
+			margin-right: 5%;
 		}
 	}
 
 	&__item-header {
 		margin-bottom: 12px;
 		font-size: @fs;
-		font-size: @lh-auto;
+		line-height: @lh-auto;
 		font-weight: bold;
 	}
 
@@ -189,11 +300,17 @@
 				margin-bottom: -(@width-sm / 10);
 			}
 
-			@media all and (min-width: @screen-md) {
+			@media all and (min-width: @screen-xs) {
 				width: @width-md;
 				height: 73px;
 				margin-bottom: -73px;
-			}	
+			}
+
+			@media all and (min-width: @screen-lg) {
+				width: @width-lg;
+				height: 73px;
+				margin-bottom: -73px;
+			}
 		}
 	}
 }
