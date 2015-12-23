@@ -10,8 +10,12 @@
 		margin-right: 36px;
 	}
 
-	@media all and (min-width: @screen-md) {
+	@media all and (min-width: @screen-xs) {
 		margin-right: 69px;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		margin-right: 55px;
 	}
 
 	&__image {
@@ -20,7 +24,7 @@
 			height: 68px;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			width: 120px;
 			height: 120px;			
 		}
@@ -34,7 +38,7 @@
 			line-height: 18/12;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			font-size: @fs-xxs;
 			line-height: 25.7/14;
 		}
@@ -58,7 +62,7 @@
 			right: -15px;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			width: 55px;
 			height: 55px;
 			top: -27px;
@@ -76,7 +80,7 @@
 				width: 13px;				
 			}
 
-			@media all and (min-width: @screen-md) {
+			@media all and (min-width: @screen-xs) {
 				width: 36px;
 			}
 		}
@@ -92,13 +96,42 @@
 				width: 13px;				
 			}
 
-			@media all and (min-width: @screen-md) {
+			@media all and (min-width: @screen-xs) {
 				width: 36px;
 			}
+		}
+
+		&:hover,
+		&:hover:before,
+		&:hover:after {
+			border-color: @blue;
+		}
+		
+		&:active {
+			background-color: @blue;
+			color: @blue;
+			border-color: @blue;
+		}
+
+		&:active:before,
+		&:active:after {
+			border-color: white;
 		}
 	}
 
 	&:nth-child(3n) {
-		margin-right: 0;
+		@media all and (max-width: @screen-xs) {
+			margin-right: 0;			
+		}
+
+		@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
+			margin-right: 0;
+		}
+	}
+
+	&:nth-child(5n) {
+		@media all and (min-width: @screen-lg) {
+			margin-right: 0;
+		}
 	}
 }

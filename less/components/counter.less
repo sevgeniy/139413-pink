@@ -16,13 +16,21 @@
 		}
 	}
 
+	 // &__field:hover ~ &__btn {
+	 // 	border-left-color: @blue;
+	 // }
+
+	 // &__field:focus ~ &__btn {
+	 // 	border-left-color: @red;
+	 // }
+
 	&__btn {
-		// font-size: 0;
 		position: absolute;
 		top: 0;
 		width: 68px;
 		height: 68px;
-		font-size: @font-size-md;
+		font-size: @fs;
+		font-size: 0;
 		background-color: @gray;
 		// color: @gray;
 		border: 2px solid @light-gray;
@@ -37,38 +45,52 @@
 			left: 0;
 			border-radius: 0 @border-radius @border-radius 0;
 
-			// &:before {
-			// 	content: "";
-			// 	display: block;
-			// 	width: 27px;
-			// 	border: 2px solid @blue;
-			// 	margin-top: 22px;
-			// 	margin-left: 11px;
-			// }
+			&:before {
+				content: "";
+				display: block;
+				width: 27px;
+				border: 2px solid @blue;
+				margin-top: 4px;
+				margin-left: 11px;
+			}
 		}
 
 		&--right {
 			right: 0;
 			border-radius: 0 @border-radius @border-radius 0;
 
-			// &:before {
-			// 	content: "";
-			// 	display: block;
-			// 	width: 27px;
-			// 	border: 2px solid @blue;
-			// 	margin-top: 2px;
-			// 	margin-left: 12px;
-			// 	transform: rotate(90deg);
-			// }
+			&:before {
+				content: "";
+				display: block;
+				width: 27px;
+				border: 2px solid @blue;
+				margin-top: 4px;
+				margin-left: 11px;
+				transform: rotate(90deg);
+			}
 
-			// &:after {
-			// 	content: "";
-			// 	display: block;
-			// 	width: 27px;
-			// 	border: 2px solid @blue;
-			// 	margin-top: -24px;
-			// 	margin-left: 11px;
-			// }
+			&:after {
+				content: "";
+				display: block;
+				width: 27px;
+				border: 2px solid @blue;
+				margin-top: -4px;
+				margin-left: 11px;
+			}
+		}
+
+		&:hover {
+			border-color: @blue;
+		}
+
+		&:active {
+			background-color: @blue;
+			border-color: @blue;
+		}
+
+		&:active:before,
+		&:active:after {
+			border-color: @white;
 		}
 	}
 }

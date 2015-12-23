@@ -8,7 +8,6 @@
 
 	&__inner {
 		
-		
 	}
 
 	&__description {
@@ -58,6 +57,14 @@
 	border: @border;
 	border-radius: @border-radius;
 	box-sizing: border-box;
+
+	&:hover {
+		border-color: @blue;
+	}
+
+	&:focus {
+		border-color: @red;	
+	}
 }
 
 .form__field--w50 {
@@ -94,12 +101,23 @@
 }
 
 .form__container {
-
+	@media all and (min-width: @screen-lg) {
+		font-size: 0;
+	}
 }
 
 .form__fields-wrapper {
 	width: 100%;
 	text-align: left;
+
+	@media all and (min-width: @screen-lg) {
+		display: inline-block;
+		vertical-align: middle;
+		width: 30%;
+		padding-top: 30px;
+		padding-bottom: 28px;
+		margin-right: 5%;
+	}
 }
 
 .form__fields-wrapper--w50 {
@@ -121,7 +139,15 @@
 }
 
 .form__fields-wrapper--radio:last-child {
-	margin-bottom: 0;
+	@media all and (max-width: @screen-lg) {
+		margin-bottom: 0;
+	}	
+}
+
+.form__fields-wrapper--radio:last-child {
+	@media all and (min-width: @screen-lg) {
+		margin-right: 0;
+	}	
 }
 
 .form__field:read-only {
@@ -188,9 +214,18 @@
 	margin-right: 22px;
 	background-color: @white;
 	border: 10px solid @white;
-	//border: 2px solid @light-gray;
 	box-shadow: 0 0 0 2px @radio-border-color;
 	border-radius: 50%;
+
+}
+
+.form__radio + .form__label:hover:before {
+	box-shadow: 0 0 0 2px @blue;
+}
+
+.form__radio + .form__label:active:before {
+	background-color: @red;
+	box-shadow: 0 0 0 2px @red;
 }
 
 .form__radio:checked + .form__label:before {
@@ -202,6 +237,11 @@
 	padding: 0;
 	list-style: none;
 	text-align: left;
+
+	@media all and (min-width: @screen-lg) {
+		font-size: 0;
+		text-align: left;
+	}
 }
 
 .form__list-item {
@@ -211,6 +251,19 @@
 	.form__list-item:last-child {
 		margin-bottom: 0;
 	}
+
+	@media all and (min-width: @screen-lg) {
+		display: inline-block;
+		vertical-align: middle;	
+		width: 30%;
+		margin-right: 5%;
+	}
+}
+
+.form__list-item:nth-child(3n) {
+	@media all and (min-width: @screen-lg) {
+		margin-right: 0;
+	}	
 }
 
 .form__checkbox {
@@ -230,6 +283,24 @@
 	border-radius: @border-radius;
 }
 
+.form__checkbox ~ .form__label:after {
+	content: "";
+	position: absolute;
+	top: 9px;
+	left: 8px;
+	display: inline-block;
+	vertical-align: middle;
+	width: 22px;
+	height: 11px;
+	margin-left: 0;
+	margin-right: 22px;
+	background-color: @white;
+	border: 3px solid @white;
+	border-top: none;
+	border-right: none;
+	transform: rotate(-45deg);
+}
+
 .form__checkbox:checked ~ .form__label:after {
 	content: "";
 	position: absolute;
@@ -246,6 +317,18 @@
 	border-top: none;
 	border-right: none;
 	transform: rotate(-45deg);
+}
+
+.form__checkbox + .form__label:hover:before {
+	border-color: @blue;
+}
+
+.form__checkbox + .form__label:active:before {
+	border-color: @red;
+}
+
+.form__checkbox + .form__label:active:after {
+	border-color: @red;
 }
 
 .form__upload-btn {
@@ -269,6 +352,15 @@
 	@media all and (min-width: @screen-md) {
 		margin-bottom: 41px;
 	}	
+
+	&:hover {
+		border-color: @blue;
+	}
+
+	&:active {
+		background-color: @blue;
+		color: @white;
+	}
 }
 
 .form__deco-line{
@@ -309,6 +401,11 @@
 	}
 }
 
+.required:after {
+	content: "*";
+	color: @red;
+}
+
 .submit-btn {
 	width: @width-sm-no-padd;
 	margin-top: 10px;
@@ -329,6 +426,15 @@
 		display: block;
 		float: left;
 	}
+
+	&:hover {
+		background-color: @dark-green;
+	}
+
+	&:active {
+		background-color: @dark-green;
+		color: rgba(255, 255, 255, 0.3);
+	}
 }
 
 .form__wrapper:nth-child(2n) {
@@ -341,14 +447,13 @@
 
 	&__wrapper {
 		.form__wrapper();
-		
 
 		@media all and (max-width: @screen-xs) {
 			padding-top: 30px;
 			padding-bottom: 43px;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			padding-top: 30px;
 			padding-bottom: 28px;
 		}
@@ -362,6 +467,10 @@
 		.form__fields-wrapper();
 	}
 
+	&__fields-wrapper:last-child {
+		margin-right: 0;
+	}
+
 	&__label {
 		.form__label();
 	}
@@ -372,17 +481,40 @@
 }
 
 .application {
-	
-}
+	.form__wrapper();
 
-.traveldates {
-	&__wrapper {
-		.form__wrapper();
+	@media all and (min-width: @screen-lg) {
+		text-align: left;
+	}
 
-		@media all and (min-width: @screen-md) {
+	&__fieldset {
+		.form__fieldset();
+
+		@media all and (min-width: @screen-lg) {
 			font-size: 0;
 		}
 	}
+
+	&__title {
+		.form__title();
+		@media all and (min-width: @screen-lg) {
+			text-align: center;
+		}
+	}	
+}
+
+.traveldates {
+	.form__wrapper();
+
+	@media all and (min-width: @screen-lg) {
+		text-align: left;
+	}
+
+
+	@media all and (min-width: @screen-md) {
+		font-size: 0;
+	}
+
 
 	&__fieldset {
 		.form__fieldset();
@@ -394,6 +526,7 @@
 
 	&__title {
 		.form__title();
+		text-align: center;
 	}
 
 	&__fields-wrapper {
@@ -403,20 +536,34 @@
 			.form__fields-wrapper--ta-center();
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			display: inline-block;
 			vertical-align: middle;
 			width: 45%;
-			margin-right: 20px;
+			margin-right: 10%;
 			font-size: @font-size;
 		}
 
-		&:last-child {
-			@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-lg) {
+			display: inline-block;
+			vertical-align: middle;
+			width: 30%;
+			margin-right: 5%;
+			font-size: @font-size;
+		}
+
+		&:nth-child(2n+1) {
+			@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
 				margin-right: 0;
 			}
 		}
-	}	
+
+		&:last-child {
+			@media all and (min-width: @screen-lg) {
+				margin-right: 0;
+			}
+		}
+	}
 
 	&__label {
 		.form__label();
@@ -429,7 +576,7 @@
 	&__field {
 		.form__field();
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			
 		}
 	}
@@ -441,12 +588,10 @@
 }
 
 .travellers {
-	&__wrapper {
-		.form__wrapper();
+	.form__wrapper();
 
-		@media all and (min-width: @screen-md) {
-			font-size: 0;
-		}
+	@media all and (min-width: @screen-md) {
+		font-size: 0;
 	}
 
 	&__fieldset {
@@ -459,6 +604,8 @@
 
 	&__title {
 		.form__title();
+
+		text-align: center;
 	}
 
 	&__fields-wrapper {
@@ -468,7 +615,7 @@
 			.form__fields-wrapper--ta-center();
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			display: inline-block;
 			vertical-align: middle;
 			width: 45%;
@@ -477,9 +624,21 @@
 		}
 
 		&:last-child {
-			@media all and (min-width: @screen-md) {
+			@media all and (min-width: @screen-xs) {
 				margin-right: 0;
 			}
+
+			@media all and (min-width: @screen-lg) {
+				margin-right: 0;
+			}
+		}
+
+		@media all and (min-width: @screen-lg) {
+			display: inline-block;
+			vertical-align: middle;
+			width: 30%;
+			margin-right: 5%;
+			font-size: @font-size;
 		}
 
 		&:first-of-type {
@@ -521,12 +680,4 @@
 			border-color: @white;
 		}	
 	}
-}
-
-.achives {
-
-}
-
-.photos {
-
 }

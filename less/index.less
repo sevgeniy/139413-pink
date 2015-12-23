@@ -44,25 +44,22 @@
 	
 	// mobile
 	@media all and (max-width: @screen-xs) {
-		background: url("../img/screen-mobile-3.png") center bottom no-repeat,
-					@gray url("../img/triangle-white.svg") left top no-repeat;
-		background-size: 158px 278px, 100%  10%;
+		background: @gray url("../img/screen-mobile-3.png") center bottom no-repeat;
+		background-size: 158px 278px;
 		padding-bottom: 278px;
 	}
 
 	@media (-webkit-min-device-pixel-ratio: 2) and (max-width: @screen-xs),
 	       (min-resolution: 2dppx) and (max-width: @screen-xs) {
-		background: url("../img/screen-mobile-3.png") center bottom no-repeat,
-					@gray url("../img/triangle-white.svg") left top no-repeat;
-		background-size: 158px 278px, 100%  10%;
+		background: @gray url("../img/screen-mobile-3.png") center bottom no-repeat;
+		background-size: 158px 278px;
 		padding-bottom: 278px;
    	}
 
    	@media (-webkit-min-device-pixel-ratio: 3) and (max-width: @screen-xs),
 	       (min-resolution: 3dppx) and (max-width: @screen-xs) {
-		background: url("../img/screen-mobile-3.png") center bottom no-repeat,
-					@gray url("../img/triangle-white.svg") left top no-repeat;
-		background-size: 158px 278px, 100%  10%;
+		background: @gray url("../img/screen-mobile-3.png") center bottom no-repeat;
+		background-size: 158px 278px;
 		padding-bottom: 278px;
    	}
 	// // mobile
@@ -90,29 +87,24 @@
  //   	}
 
 	// tablet
-	@media all and (min-width: @screen-xs) {
+	@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
 		.clearfix();
-		background: url("../img/iphone-screen-tablet-3@1x.png") @padding-md bottom no-repeat,
-					@gray url("../img/triangle-white.svg") left top no-repeat;
-		background-size: 268px 481px, 100%  100% * 55/700;
+		background: @gray url("../img/iphone-screen-tablet-3@1x.png") @padding-md bottom no-repeat;
+		background-size: 268px 481px;
 		padding-top: 81px;
 	}	
 
 	@media (-webkit-min-device-pixel-ratio: 2) and (min-width: @screen-xs),
 	       (min-resolution: 2dppx) and (min-width: @screen-xs) {
    		.clearfix();
-		background: url("../img/iphone-screen-tablet-3@2x.png") @padding-md bottom no-repeat,
-					@gray url("../img/triangle-white.svg") left top no-repeat;
-		background-size: 268px 481px, 100%  100% * 55/700;
+		background: @gray url("../img/iphone-screen-tablet-3@2x.png") @padding-md bottom no-repeat;					
+		background-size: 268px 481px;
 		padding-top: 81px;
    	}
 
 	// desktop
 	@media all and (min-width: @screen-lg) {
 		.clearfix();
-		background: @gray url("../img/triangle-white.svg") left top no-repeat;
-		background-size: 100%  100% * 55/700;
-		padding-top: 81px;
 	}	
 
 	&__container {
@@ -186,6 +178,7 @@
 		}
 
 		@media all and (min-width: @screen-lg) {
+			.clearfix();
 			display: inline-block;
 			vertical-align: middle;
 			font-size: 0;
@@ -222,43 +215,54 @@
 	&__item {
 		padding-bottom: 32px;
 	
-		&:nth-child(1) {
+		&:nth-of-type(2) {
 			@media all and (min-width: @screen-xs) and (max-width: @screen-lg){
 				float: left;
 				width: 50%;
 			}	
+
+			@media all and (min-width: @screen-lg) {
+				float: left;
+				width: 30%;
+			}
 		}
 
-		&:nth-child(2) {
+		&:nth-of-type(3) {
 			@media all and (min-width: @screen-xs) and (max-width: @screen-lg){
 				float: right;
 			 	width: 50%;
 			}
 
 			@media all and (min-width: @screen-lg) {
-				transform: translate(30%, 0);
+				float: right;
+				width: 30%;
 			}
 		}
 
-		&:nth-child(3) {
+		&:nth-of-type(4) {
 			@media all and (min-width: @screen-xs) and (max-width: @screen-lg){
 				// padding-left: 180px;
 				// padding-right: 180px;
-				width: 100%;
+				// width: 100%;
+				clear: both;
+				width: 50%;
+				margin: 0 auto;
 			}	
 
 			@media all and (min-width: @screen-lg) {
-				margin-right: 0;
-				transform: translate(-30%, 0);
+				// margin-right: 0;
+				// transform: translate(-30%, 0);
+				display: inline-block;
+				width: 30%;
 			}
 		}
 
-		@media all and (min-width: @screen-lg) {
-			display: inline-block;
-			vertical-align: middle;
-			width: 30%;
-			margin-right: 5%;
-		}
+		// @media all and (min-width: @screen-lg) {
+		// 	display: inline-block;
+		// 	vertical-align: middle;
+		// 	width: 30%;
+		// 	margin-right: 5%;
+		// }
 	}
 
 	&__item-header {
@@ -278,6 +282,16 @@
 	&__item-link {
 		display: inline-block;
 		text-decoration: none;
+
+		&:hover {
+			color: @blue;
+			text-decoration: underline;
+		}
+
+		&:active {
+			color: @blue;
+			opacity: 0.3;
+		}
 	}
 
 	&__map-container {
@@ -291,8 +305,8 @@
 			width: @width-sm;
 			height: @width-sm / 10;
 			margin-bottom: -(@width-sm / 10);
-			background: @gray url("../img/triangle-white-footer.svg") center top no-repeat;
-			background-size: 100% 100%;
+			// background: @gray url("../img/triangle-white-footer.svg") center top no-repeat;
+			// background-size: 100% 100%;
 
 			@media all and (max-width: @screen-xs) {
 				width: @width-sm;
@@ -312,5 +326,43 @@
 				margin-bottom: -73px;
 			}
 		}
+	}
+}
+
+.triangle {
+	fill: @white;
+	background: @gray;
+
+	@media all and (max-width: @screen-xs) {
+		width: 320px;
+		height: 25.0864px;
+		margin-bottom: -23px;
+	}
+
+	@media all and (min-width: @screen-xs) {
+		width: 700px;
+		height: 69.708px;
+		margin-bottom: -3px;
+	}
+
+	@media all and (min-width: @screen-lg) {
+	    width: 1200px;		    
+	    height: 94.074px;
+	    margin-bottom: -5px;
+	}
+}
+
+.deco-triangle {
+	width: 100%;
+	height: 100px;
+	background: url(../img/triangle-gray.svg) center center no-repeat;
+	background-size: 100%;
+	margin-bottom: -32px;
+	transform: rotate(180deg);
+}
+
+.features__item {
+	@media all and (min-width: @screen-lg) {
+	    margin-top: -50px;
 	}
 }

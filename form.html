@@ -133,11 +133,11 @@
 				<div class="personal personal__wrapper">
 					<div class="personal__container">
 						<div class="personal__fields-wrapper">
-							<label class="personal__label" for="firstname">Имя:</label>
+							<label class="personal__label required" for="firstname">Имя:</label>
 							<input class="personal__field" id="firstname" name="firstname" type="text" placeholder="Введите ваше имя" autocomplete="off" required>
 						</div>
 						<div class="personal__fields-wrapper">
-							<label class="personal__label" for="lastname">Фамилия:</label>
+							<label class="personal__label required" for="lastname">Фамилия:</label>
 							<input class="personal__field" id="lastname" name="lastname" type="text" placeholder="Укажите фамилию" autocomplete="off" required>
 						</div>
 						<div class="personal__fields-wrapper">
@@ -146,9 +146,9 @@
 						</div>
 					</div>
 				</div>
-				<div class="application form__wrapper">
-					<fieldset class="form__fieldset">
-						<legend class="form__title">С каким приложением путешествовали?</legend>
+				<div class="application">
+					<fieldset class="application__fieldset">
+						<legend class="application__title required">С каким приложением путешествовали?</legend>
 						<div class="form__fields-wrapper form__fields-wrapper--radio">
 							<input class="form__radio" type="radio" id="ios" name="appname" value="ios" checked><label class="form__label form__label--blue" for="ios">Pink для iOS</label>
 						</div>
@@ -160,9 +160,9 @@
 						</div>
 					</fieldset>
 				</div>
-				<div class="traveldates traveldates__wrapper">
+				<div class="traveldates">
 					<fieldset class="traveldates__fieldset">
-						<legend class="traveldates__title traveldates__title--required">Когда вы путешествовали?</legend>
+						<legend class="traveldates__title required">Когда вы путешествовали?</legend>
 						<div class="traveldates__fields-wrapper traveldates__fields-wrapper--ta-center">
 							<input class="traveldates__field traveldates__field--before-label" type="text" id="departure" name="departure" value="1 апреля 2015">
 							<label class="traveldates__label traveldates__label--after-field" for="departure">Дата выезда</label>
@@ -181,9 +181,9 @@
 						</div>
 					</fieldset>
 				</div>				
-				<div class="travellers travellers__wrapper">
+				<div class="travellers">
 					<fieldset class="travellers__fieldset">
-						<legend class="travellers__title">Количество попутчиков</legend>
+						<legend class="travellers__title required">Количество попутчиков</legend>
 						<div class="travellers__fields-wrapper">
 							<div class="counter">
 								<button class="counter__btn counter__btn--left counter__btn--white">-</button>
@@ -199,7 +199,7 @@
 									<div class="friend__number-field">1</div>
 								</div>
 								<div class="friend__data-wrapper">
-									<label class="friend__data-label" for="friend1_name">Имя:</label>
+									<label class="friend__data-label required" for="friend1_name">Имя:</label>
 									<input class="friend__data-field friend__data-field--no-left-border-radius" type="text" id="friend1_name" name="friend1_name" placeholder="Введите ваше имя" required>
 								</div>
 								<div class="friend__data-wrapper">
@@ -214,7 +214,7 @@
 									<div class="friend__number-field">2</div>
 								</div>
 								<div class="friend__data-wrapper">
-									<label class="friend__data-label" for="friend1_name">Имя:</label>
+									<label class="friend__data-label required" for="friend1_name">Имя:</label>
 									<input class="friend__data-field friend__data-field--no-left-border-radius" type="text" id="friend1_name" name="friend1_name" placeholder="Введите ваше имя" required>
 								</div>
 								<div class="friend__data-wrapper">
@@ -226,9 +226,9 @@
 						</section>
 					</fieldset>
 				</div>
-				<div class="achives form__wrapper">
+				<div class="form__wrapper">
 					<fieldset class="form__fieldset">
-						<legend class="form__title">Ваши безбашенные достижения в путешествии</legend>
+						<legend class="form__title required">Ваши безбашенные достижения в путешествии</legend>
 						<ul class="form__list">
 							<li class="form__list-item">
 								<input  class="form__checkbox" type="checkbox" name="shark" id="shark" checked><label class="form__label form__label--blue" for="shark">Сделал селфи с акулой</label>
@@ -251,7 +251,7 @@
 						</ul>
 					</fieldset>
 				</div>
-				<div class="photos form__wrapper">
+				<div class="form__wrapper">
 					<fieldset class="form__fieldset">
 						<legend  class="form__title form__title--required">Ваши фотографии из поездки</legend>
 						<input class="form__upload-btn" type="file" id="upload_image" name="upload_image">
