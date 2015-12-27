@@ -7,16 +7,34 @@
 	.container--white();
 	.clearfix();
 
-	@media all and (min-width: @screen-md) {
-		display: block;		
+	
+	@media all and (min-width: @screen-xs) {
+		display: block;
 		padding-top: 56px;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		display: block;
+		padding-top: 18px;
+		padding-bottom: 66px;
+		background-color: @gray;
+	}
 		
-		&__logo {
+	&__logo {
+		@media all and (min-width: @screen-xs) {
 			float: left;
 			width: 262px;
 			position: relative;
-			
-			&:after {
+		}
+
+		@media all and (min-width: @screen-lg) {
+			float: left;
+			width: 262px;
+			position: relative;
+		}	
+		
+		&:after {
+			@media all and (min-width: @screen-xs) {
 				content: "24";
 				position: absolute;
 				display: block;
@@ -32,72 +50,87 @@
 				text-align: center;
 				border: 11px solid @red;
 				border-radius: 50%;
+			}	
+
+			@media all and (min-width: @screen-lg) {
+				background-color: @gray;
 			}
 		}
+	}
 
-		&__image {
-			width: 262px;
-			height: 302px;
+	&__image {
+		width: 262px;
+		height: 302px;
 
-			path {
+		path {
+			@media all and (min-width: @screen-xs) {
 				fill: @timer-color;
 			}
-		}
 
-		// &__container {
-		// 	float: right;
-		// 	width: 310px;
-		// 	padding-left: 10px;
+			@media all and (min-width: @screen-lg) {
+				fill: #dedede;
+			}
+		}			
+	}
 
-			
-		// }
+	&__title {
+		font-weight: bold;
+		color: @black;
 
-		&__title {
+		@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
 			width: 170px;
 			margin-top: 42px;
 			font-size: @fs-xxxl;
 			line-height: 36/30;
-			font-weight: bold;
-			color: @black;
+			
 		}
 
-		&__description {
+		@media all and (min-width: @screen-lg) {
+			margin-top: 98px;
+			font-size: @fs-xxl;
+			line-height: 1;
+		}
+		
+	}
+
+	&__description {
+		@media all and (min-width: @screen-xs) {
 			font-size: @fs-xxs;
 			line-height: 24/14;
 		}
 
-		&__link {
+		@media all and (min-width: @screen-lg) {
+			font-size: @fs;
+			line-height: 30/18;
+			margin-top: 29px;
+			margin-bottom: 35px;
+		}
+	}
+
+	&__link {
+		color: @red;
+
+		@media all and (min-width: @screen-xs) {
 			font-size: @fs-xxs;
-			line-height: 24/14;
-			color: @red;
+			line-height: 24/14;			
+		}
+
+		@media all and (min-width: @screen-lg) {
+			font-size: @fs;
+			line-height: 30/18;
 		}
 	}
 
 	&__container {
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			float: right;
 			width: 310px;
 			padding-left: 10px;
 		}
 
 		@media all and (min-width: @screen-lg) {
-			width: 410px;
-			margin-right: 210px;				
-		}
-	}
-
-	&__title {
-		@media all and (min-width: @screen-md) {
-			width: 170px;
-			margin-top: 42px;
-			font-size: @fs-xxxl;
-			line-height: 36/30;
-			font-weight: bold;
-			color: @black;
-		}
-
-		@media all and (min-width: @screen-lg) {
-			width: auto;
+			width: 470px;
+			margin-right: 150px;
 		}
 	}
 }

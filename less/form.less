@@ -13,6 +13,7 @@
 	&__description {
 		.container();
 		color: @blue;
+		text-transform: none;
 
 		@media all and (max-width: @screen-xs) {
 			padding-top: 54px;
@@ -20,7 +21,14 @@
 			line-height: 30/14;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
+			padding-top: 100px;
+			font-size: @fs;
+			line-height: 30/18;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			width: 740px;
 			padding-top: 100px;
 			font-size: @fs;
 			line-height: 30/18;
@@ -29,7 +37,7 @@
 }
 
 .form {
-	
+	text-transform: uppercase;
 }
 
 .form__label {
@@ -79,6 +87,10 @@
 	.container();
 	background-color: @white;
 	color: @blue;
+
+	@media all and (min-width: @screen-lg) {
+		margin-bottom: 51px;
+	}	
 }
 
 .form__wrapper:last-of-type {
@@ -89,6 +101,11 @@
 	@media all and (min-width: @screen-md) {
 		padding-top: 66px;
 		padding-bottom: 64px;
+	}
+	@media all and (min-width: @screen-md) {
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-bottom: 0;
 	}
 }
 
@@ -136,6 +153,10 @@
 	@media all and (min-width: @screen-md) {
 		margin-bottom: 36px;
 	}
+
+	@media all and (min-width: @screen-lg) {
+		margin-bottom: 0;
+	}
 }
 
 .form__fields-wrapper--radio:last-child {
@@ -165,10 +186,16 @@
 		border: none;
 	}
 
-	@media all and (min-width: @screen-md) {
+	@media all and (min-width: @screen-xs) {
 		padding: 0 58px;
 		padding-top: 50px;
 		padding-bottom: 54px;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		padding: 0 58px;
+		padding-top: 24px;
+		padding-bottom: 27px;
 	}
 }
 
@@ -183,10 +210,20 @@
 		line-height: 18/14;
 	}
 
-	@media all and (min-width: @screen-md) {
+	@media all and (min-width: @screen-xs) {
 		padding-left: 18px;
 		padding-right: 18px;
 		padding-bottom: 0;
+		font-size: @fs-xxs;
+		line-height: 30/14;
+		border: none;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		padding-left: 18px;
+		padding-right: 18px;
+		padding-bottom: 0;
+		font-size: @fs-xxs;
 		line-height: 30/14;
 		border: none;
 	}
@@ -221,6 +258,7 @@
 
 .form__radio + .form__label:hover:before {
 	box-shadow: 0 0 0 2px @blue;
+	cursor: pointer;
 }
 
 .form__radio + .form__label:active:before {
@@ -247,6 +285,7 @@
 .form__list-item {
 	position: relative;
 	margin-bottom: 43px;
+	text-transform: none;
 
 	.form__list-item:last-child {
 		margin-bottom: 0;
@@ -256,7 +295,7 @@
 		display: inline-block;
 		vertical-align: middle;	
 		width: 30%;
-		margin-right: 5%;
+		margin-right: 5%;		
 	}
 }
 
@@ -319,8 +358,13 @@
 	transform: rotate(-45deg);
 }
 
+.form__checkbox ~ .form__label:hover:after {
+	cursor: pointer;
+}
+
 .form__checkbox + .form__label:hover:before {
 	border-color: @blue;
+	cursor: pointer;
 }
 
 .form__checkbox + .form__label:active:before {
@@ -349,9 +393,14 @@
 	@media all and (max-width: @screen-xs) {
 		margin-bottom: 33px;
 	}					
-	@media all and (min-width: @screen-md) {
+	@media all and (min-width: @screen-xs) {
 		margin-bottom: 41px;
-	}	
+	}
+	@media all and (min-width: @screen-lg) {
+		font-size: @fs;
+		line-height: 30/18;
+		margin-bottom: 41px;
+	}
 
 	&:hover {
 		border-color: @blue;
@@ -370,9 +419,11 @@
 	@media all and (max-width: @screen-xs) {
 		margin-bottom: 35px;	
 	}					
-	@media all and (min-width: @screen-md) {
-
+	@media all and (min-width: @screen-xs) {
 		margin-bottom: 64px;
+	}
+	@media all and (min-width: @screen-lg) {
+		margin-bottom: 66px;
 	}
 }
 
@@ -402,7 +453,7 @@
 }
 
 .required:after {
-	content: "*";
+	content: " *";
 	color: @red;
 }
 
@@ -444,7 +495,6 @@
 }
 
 .personal {
-
 	&__wrapper {
 		.form__wrapper();
 
@@ -456,6 +506,11 @@
 		@media all and (min-width: @screen-xs) {
 			padding-top: 30px;
 			padding-bottom: 28px;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			padding-top: 40px;
+			padding-bottom: 20px;
 		}
 	}
 
@@ -482,6 +537,10 @@
 
 .application {
 	.form__wrapper();
+
+	@media all and (min-width: @screen-lg) {
+		margin-bottom: 50px;
+	}
 
 	@media all and (min-width: @screen-lg) {
 		text-align: left;
@@ -511,16 +570,27 @@
 	}
 
 
-	@media all and (min-width: @screen-md) {
+	@media all and (min-width: @screen-xs) {
 		font-size: 0;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		font-size: 0;
+		margin-bottom: 51px;
 	}
 
 
 	&__fieldset {
 		.form__fieldset();
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			text-align: left;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			text-align: left;
+			padding-top: 14px;
+			padding-bottom: 0;
 		}
 	}
 
@@ -590,15 +660,21 @@
 .travellers {
 	.form__wrapper();
 
-	@media all and (min-width: @screen-md) {
+	@media all and (min-width: @screen-xs) {
 		font-size: 0;
 	}
 
 	&__fieldset {
 		.form__fieldset();
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			text-align: left;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			text-align: left;
+			padding-top: 0;
+			padding-bottom: 57px;
 		}
 	}
 
@@ -646,13 +722,15 @@
 				margin-bottom: 48px;
 			}
 
-			@media all and (min-width: @screen-md) {
+			@media all and (min-width: @screen-xs) {
 				margin-bottom: 42px;
+			}
+
+			@media all and (min-width: @screen-lg) {
+				margin-bottom: 12px;
 			}
 		}
 	}
-
-
 
 	&__label {
 		.form__label();
@@ -679,5 +757,67 @@
 			background-color: @white;
 			border-color: @white;
 		}	
+	}
+}
+
+.achieves {
+	.form__wrapper();
+
+	@media all and (min-width: @screen-xs) {
+		font-size: 0;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		font-size: 0;
+	}
+
+	&__fieldset {
+		.form__fieldset();
+
+		@media all and (min-width: @screen-xs) {
+			text-align: left;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			text-align: left;
+			padding-top: 37px;
+			padding-bottom: 12px;
+		}
+	}
+
+	&__title {
+		.form__title();
+
+		text-align: center;
+	}
+}
+
+.photos {
+	.form__wrapper();
+
+	@media all and (min-width: @screen-xs) {
+		font-size: 0;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		font-size: 0;
+		margin-bottom: 55px;
+	}
+
+	&__fieldset {
+		.form__fieldset();
+
+		@media all and (min-width: @screen-xs) {
+		}
+
+		@media all and (min-width: @screen-lg) {
+			padding-top: 28px;
+			padding-bottom: 40px;
+		}
+	}
+
+	&__title {
+		.form__title();
+		text-align: center;
 	}
 }

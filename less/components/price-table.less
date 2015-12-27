@@ -5,25 +5,15 @@
 	padding-bottom: 42px;
 	text-transform: uppercase;
 	overflow: hidden;
+
 	
 	padding-top: 40px;
-	// &:before {
-	// 	content: "";
-	// 	display: block;
-	// 	margin-bottom: 90px;
-	// 	// background: @gray url("../img/triangle-white.svg") left top no-repeat;
-	// 	// background-size: 100% 100%;
 
-	// 	@media all and (max-width: @screen-xs) {
-	// 		width: @width-sm;
-	// 		height: @width-sm / 10;
-	// 	}
+	@media all and (min-width: @screen-lg) {
+		padding-top: 60px;
+		padding-bottom: 95px;
+	}
 
-	// 	@media all and (min-width: @screen-md) {
-	// 		width: @width-md;
-	// 		height: 56px;
-	// 	}	
-	// }
 
 	&__wrapper {
 		top: 90px;
@@ -34,22 +24,30 @@
 			width: @width-sm-no-padd * 3;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
 			.container();
 			width: @width-md-no-padd;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			.container();
 		}
 	}
 
 	&__column-wrapper {
 		display: inline-block;
-		padding-bottom: 40px;
+		
 
 		@media all and (max-width: @screen-xs) {
 			width: @width-sm-no-padd;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			width: @width-md-no-padd / 4;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			width: 235px;
 		}
 
 		&:first-child {
@@ -112,22 +110,15 @@
 			font-size: @fs;
 			line-height: 30/18;
 		}					
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			font-size: @fs-xs;
 			line-height: 30/16;
 		}
 
-		// &--hit:after {
-		// 	width: 150px;
-		//     content: "ХИТ";
-		//     display: block;
-		//     font-size: 14px;
-		//     line-height: 30/14;
-		//     background-color: @red;
-		//     color: #ffffff;
-		//     transform: rotate(-45deg) translate(-5px, -62px);
-		//     font-weight: bold;
-		// }
+		@media all and (min-width: @screen-lg) {
+			font-size: @fs;
+			line-height: 30/18;
+		}
 	}
 
 	&__rate-price {
@@ -138,6 +129,11 @@
 		@media all and (min-width: @screen-md) {
 			font-size: @fs;
 			line-height: 30/18;
+		}
+
+		@media all and (min-width: @screen-md) {
+			font-size: @fs-xl;
+			line-height: 30/24;
 		}
 	}
 
@@ -165,17 +161,27 @@
 		@media all and (min-width: @screen-md) {
 			display: none;
 		}
+
+		@media all and (min-width: @screen-lg) {
+			font-size: @fs;
+			line-height: 30/18;
+			text-transform: none;
+		}
 	}
 
 	&__option-value {
 		float: right;
-		width: 31px;
+		width: 29px;
 		height: 22px;
 		margin-right: 18px;
 		font-size: 0;
 		
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			margin-right: 57px;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			margin-right: 102px;
 		}
 
 		&--no {
@@ -268,6 +274,11 @@
 
 .yes {
 	fill: @green;
+
+	@media all and (min-width: @screen-lg) {
+		width: 29px;
+		height: 22px;
+	}
 }
 
 .no {

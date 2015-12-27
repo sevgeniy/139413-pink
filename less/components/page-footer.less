@@ -5,9 +5,13 @@
 	font-size: 0;
 
 	@media all and (min-width: @screen-xs) {
-		// text-align: left;
 		padding-top: 36px;
 		padding-bottom: 51px;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		padding-top: 70px;
+		padding-bottom: 71px;
 	}
 	
 	&__item {
@@ -30,7 +34,7 @@
 	}
 
 	&__copyright {
-		margin: 0 auto;		
+		margin: 0 auto;
 		line-height: 34px;
 		vertical-align: middle;
 		text-align: right;
@@ -43,7 +47,18 @@
 	
 	&__copyright-text {
 		font-size: @fs-xxs;
-		line-height: 18/14;			
+		line-height: 18/14;
+		margin-right: 13px;
+
+		@media all and (min-width: @screen-xs) {
+			font-size: @fs-xxs;
+			vertical-align: middle;
+		}
+
+		@media all and (min-width: @screen-lg) {
+			font-size: @fs;
+			vertical-align: middle;
+		}
 	}
 
 	&__copyright-link {

@@ -90,6 +90,9 @@
 	}
 
 	&__text {
+		padding-left: 25px;	
+		padding-right: 25px;	
+	
 		@media all and (max-width: @screen-xs) {
 			font-size: 14px;
 			line-height: 24/14;
@@ -100,7 +103,11 @@
 			line-height: 24/18;
 		}
 
-		padding-left: 25px;	
-		padding-right: 25px;
+		@media all and (min-width: @screen-lg) {
+			padding-left: 0;
+			padding-right: 0;
+			font-size: 18px;
+			line-height: 24/18;
+		}		
 	}		
 }
