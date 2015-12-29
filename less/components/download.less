@@ -11,7 +11,7 @@
 		float: left;
 		width: 300px;
 		padding-top: 40px;
-		padding-bottom: 32px;
+		padding-bottom: 81px;
 	}
 
 	@media all and (min-width: @screen-lg) {
@@ -91,14 +91,17 @@
 
 	&__text {
 		padding-left: 25px;	
-		padding-right: 25px;	
+		padding-right: 25px;
 	
 		@media all and (max-width: @screen-xs) {
 			font-size: 14px;
 			line-height: 24/14;
 		}					
 		
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
+			margin-top: 0;
+			padding-left: 0;
+			padding-right: 0;
 			font-size: 18px;
 			line-height: 24/18;
 		}

@@ -9,6 +9,11 @@
 	
 	padding-top: 40px;
 
+	@media all and (min-width: @screen-xs) {
+		padding-top: 35px;
+		padding-bottom: 68px;
+	}
+
 	@media all and (min-width: @screen-lg) {
 		padding-top: 60px;
 		padding-bottom: 95px;
@@ -123,15 +128,15 @@
 
 	&__rate-price {
 		@media all and (max-width: @screen-xs) {
-			font-size: @fs-xl;
+			font-size: @fs-xs;
 			line-height: 30/24;
 		}					
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			font-size: @fs;
 			line-height: 30/18;
 		}
 
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-lg) {
 			font-size: @fs-xl;
 			line-height: 30/24;
 		}
@@ -158,8 +163,9 @@
 		line-height: 30/14;
 		text-align: left;
 		
-		@media all and (min-width: @screen-md) {
+		@media all and (min-width: @screen-xs) {
 			display: none;
+			text-transform: none;
 		}
 
 		@media all and (min-width: @screen-lg) {
@@ -177,7 +183,7 @@
 		font-size: 0;
 		
 		@media all and (min-width: @screen-xs) {
-			margin-right: 57px;
+			margin-right: 60px;
 		}
 
 		@media all and (min-width: @screen-lg) {

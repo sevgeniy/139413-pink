@@ -11,8 +11,8 @@
 	}					
 	
 	@media all and (min-width: @screen-xs) {
-		padding-top: 58px;		
-		padding-bottom: 53px;
+		padding-top: 54px;		
+		padding-bottom: 51px;
 	}
 
 	@media all and (min-width: @screen-lg) {
@@ -50,54 +50,55 @@
 .features {
 	.container();
 	.container--gray();
-	
+
+	@media all and (max-width: @screen-xs) {
+		padding-bottom: 278px;
+	}
+
+	@media all and (min-width: @screen-xs) {
+		.clearfix();
+		padding-top: 24px;
+	}
+
+	@media all and (min-width: @screen-lg) {
+		.clearfix();
+	}
+
 	// mobile
 	@media all and (max-width: @screen-xs) {
 		background: @gray url("../img/screen-mobile-3.png") center bottom no-repeat;
 		background-size: 158px 278px;
-		padding-bottom: 278px;
 	}
 
 	@media (-webkit-min-device-pixel-ratio: 2) and (max-width: @screen-xs),
 	       (min-resolution: 2dppx) and (max-width: @screen-xs) {
 		background: @gray url("../img/screen-mobile-3.png") center bottom no-repeat;
-		background-size: 158px 278px;
-		padding-bottom: 278px;
+		background-size: 158px 278px;		
    	}
 
    	@media (-webkit-min-device-pixel-ratio: 3) and (max-width: @screen-xs),
 	       (min-resolution: 3dppx) and (max-width: @screen-xs) {
 		background: @gray url("../img/screen-mobile-3.png") center bottom no-repeat;
 		background-size: 158px 278px;
-		padding-bottom: 278px;
    	}
-
-	// tablet
-	@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
-		.clearfix();
-		background: @gray url("../img/iphone-screen-tablet-3@1x.png") @padding-md bottom no-repeat;
-		background-size: 268px 481px;
-		padding-top: 81px;
-	}	
-
-	@media (-webkit-min-device-pixel-ratio: 2) and (min-width: @screen-xs),
-	       (min-resolution: 2dppx) and (min-width: @screen-xs) {
-   		.clearfix();
-		background: @gray url("../img/iphone-screen-tablet-3@2x.png") @padding-md bottom no-repeat;					
-		background-size: 268px 481px;
-		padding-top: 81px;
-   	}
-
-	// desktop
-	@media all and (min-width: @screen-lg) {
-		.clearfix();
-	}	
 
 	&__container {
 		@media (min-width: @screen-xs) and (max-width: @screen-lg) {
 			float: right;
-			width: 320px;
+			width: 310px;
 		}
+	}
+
+	&__image {
+		display: none;
+		
+		@media (min-width: @screen-xs) and (max-width: @screen-lg) {
+			display: inline-block;
+			width: 268px;
+			height: 481px;
+			margin-top: -60px;
+			vertical-align: bottom;
+		}		
 	}
 	
 	&__item {
@@ -118,11 +119,15 @@
 		font-size: @fs;
 		line-height: 24/18;
 		font-weight: bold;
+		color: @black;
+
+		@media all and (min-width: @screen-xs) {
+			margin-top: 0;
+		}
 
 		@media all and (min-width: @screen-lg) {
 			font-size: @fs-xxl;
-			line-height: 1;
-			color: @black;
+			line-height: 1;			
 		}
 	}
 
@@ -131,11 +136,19 @@
 		font-size: @fs-xxs;
 		line-height: 24/14;
 
+		@media all and (min-width: @screen-xs) {
+			margin-bottom: 40px;
+		}
+
 		@media all and (min-width: @screen-lg) {
 			padding: 0 30px;
 			font-size: @fs;
 			line-height: 30/18;
 		}
+	}
+
+	&__item:last-child &__item-text {
+		margin-bottom: 30px;
 	}
 
 	&__item-image {
@@ -166,7 +179,6 @@
 	@media all and (min-width: @screen-lg) {
 		padding-top: 70px;
 	}
-
 
 	&__container {
 		@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
@@ -264,6 +276,8 @@
 			margin-bottom: 30px;
 		}
 	}
+		
+	
 
 	&__item-text,
 	&__item-link {
@@ -271,8 +285,23 @@
 		line-height: @lh-auto;
 		color: @red;
 
+		@media (max-width: @screen-xs) {
+			font-size: @fs-xl;
+		}
+
+		@media (min-width: @screen-xs) {
+			font-size: @fs-xl;
+		}
+
 		@media (min-width: @screen-lg) {
 			font-size: @fs-xl;
+		}
+	}
+
+	&__item-text:last-child {
+		@media (min-width: @screen-xs) and (max-width: @screen-lg) {
+			padding-left: 20px;
+			padding-right: 20px;
 		}
 	}
 
@@ -297,19 +326,17 @@
 							url("../img/map.jpg") center center no-repeat;	
 
 		@media all and (max-width: @screen-xs) {
-			height: @width-sm / 10;
-			margin-bottom: -(@width-sm / 10);
+			height: 200px;
+			background-size: 100% 32px, cover;
 		}
 
 		@media all and (min-width: @screen-xs) {
-			height: 73px;
-			margin-bottom: -73px;
+			height: 378px;
+			background-size: 100% 74px, cover;
 		}
 
 		@media all and (min-width: @screen-lg) {
 			height: 522px;
-			// background: url("../img/triangle-white-footer.svg") center top no-repeat, 
-			// 			url("../img/map.jpg") center center no-repeat;
 			background-size: 100% 124px, cover;
 		}
 	}
@@ -326,9 +353,9 @@
 	}
 
 	@media all and (min-width: @screen-xs) {
-		width: 700px;
-		height: 69.708px;
-		margin-bottom: -3px;
+		width: 100%;
+		height: 53px;
+		margin-bottom: -4px;
 	}
 
 	@media all and (min-width: @screen-lg) {

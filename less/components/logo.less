@@ -145,51 +145,49 @@
 	}
 }
 
-.logo-pink-desktop {
+.logo-pink__glasses {
+	@media all and (max-width: @screen-xs) {
+		display: none;
+	}
+}
+
+.logo-pink-desktop, .logo-pink-desktop-footer {
+	@media all and (max-width: @screen-lg) {
+		display: none;
+	}
+
 	@media all and (min-width: @screen-lg) {
 		display: inline-block;
 	}
-
-	&--footer {
-		fill: @blue;
-		// @media all and (min-width: @screen-lg) {
-		
-		// }
-	}
 }
 
-.logo-pink {
-	@media all and (max-width: @screen-lg) {
-		display: none;
-	}
-}
-
-.logo-pink-desktop {
-	@media all and (max-width: @screen-lg) {
-		display: none;
-	}
-}
-
-.logo-pink {
+.logo-pink, .logo-pink-footer {
 	@media all and (max-width: @screen-lg) {
 		display: inline-block;
 	}
 
-	&--footer {
-		@media all and (max-width: @screen-lg) {
-			fill: @blue;
-		}		
+	@media all and (min-width: @screen-lg) {
+		display: none;
 	}
 }
 
-.logo-pink__glasses {
-	@media all and (max-width: @screen-xs) {
-		display: none;	
+.logo-pink-footer__pink {
+	fill: @blue;
+
+	&:hover {
+		fill: @red;
 	}
 }
 
-.logo-pink.logo-pink--footer .logo-pink__glasses {
-	@media all and (max-width: @screen-xs) {
-		display: inline-block;	
+
+.logo-pink-footer:hover {
+	fill: @red;
+}
+
+.logo-pink-desktop-footer__pink {
+	fill: @blue;
+
+	&:hover {
+		fill: @red;
 	}
 }
