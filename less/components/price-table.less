@@ -6,8 +6,10 @@
 	text-transform: uppercase;
 	overflow: hidden;
 
-	
-	padding-top: 40px;
+	@media all and (max-width: @screen-xs) {
+		padding-top: 65px;
+		padding-bottom: 28px;
+	}
 
 	@media all and (min-width: @screen-xs) {
 		padding-top: 35px;
@@ -27,6 +29,7 @@
 
 		@media all and (max-width: @screen-xs) {
 			width: @width-sm-no-padd * 3;
+			margin-bottom: 40px;
 		}
 
 		@media all and (min-width: @screen-xs) and (max-width: @screen-lg) {
@@ -128,7 +131,7 @@
 
 	&__rate-price {
 		@media all and (max-width: @screen-xs) {
-			font-size: @fs-xs;
+			font-size: @fs-xl;
 			line-height: 30/24;
 		}					
 		@media all and (min-width: @screen-xs) {
@@ -143,16 +146,26 @@
 	}
 
 	&__option {
+		
 		.clearfix();	
-		height: 45px;	
-		padding-top: 10px;
-		padding-bottom: 16px;
+		
+		padding-top: 19px;
 		font-size: @font-size;
 		line-height: @line-height-lg-2;
 		background-color: @white;
 		color: @dark-blue;
 		border: 1px solid @light-gray;
 		box-sizing: border-box;
+
+		@media all and (max-width: @screen-xs) {
+			padding-top: 19px;
+			padding-bottom: 18px;
+		}
+		
+		@media all and (min-width: @screen-xs) {
+			height: 45px;
+			padding-top: 8px;
+		}
 	}
 
 	&__option-name {
@@ -213,7 +226,7 @@
 	&__controls {
 		width: @width-slid-contr;	
 		font-size: 0;
-
+	
 		@media all and (max-width: @screen-xs) {
 			margin-left: (@width-sm - @width-slid-contr) / 2;
 			padding-bottom: 20px;

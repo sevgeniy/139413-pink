@@ -43,8 +43,6 @@
 		@media all and (min-width: @screen-lg) {
 			width: 146.3px;
 			height: 40.375px;
-			// background: url("../img/logotype-white-desktop.svg") center center no-repeat;
-
 		}
 
 		&--stars:after {
@@ -57,7 +55,6 @@
 				width: 146.3px;
 				height: 40.375px;
 				background: url("../img/logotype-white-desktop.svg") center center no-repeat;
-				// outline: 1px solid white;
 			}			
 		}
 
@@ -133,14 +130,16 @@
 	}
 }
 
-.logo__image--footer {
+.logo-pink-footer, 
+.logo-pink-desktop-footer {
+	fill: @blue;
 
 	&:hover {
 		fill: @red;
 	}
 
 	&:active {
-		
+		fill: @blue;
 		opacity: 0.3;
 	}
 }
@@ -171,23 +170,10 @@
 	}
 }
 
-.logo-pink-footer__pink {
-	fill: @blue;
+// .logo-pink-footer__pink {
+// 	fill: @blue;
 
-	&:hover {
-		fill: @red;
-	}
-}
-
-
-.logo-pink-footer:hover {
-	fill: @red;
-}
-
-.logo-pink-desktop-footer__pink {
-	fill: @blue;
-
-	&:hover {
-		fill: @red;
-	}
-}
+// 	&:hover {
+// 		fill: @red;
+// 	}
+// }

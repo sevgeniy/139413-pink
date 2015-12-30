@@ -22,6 +22,7 @@
 		}
 
 		@media all and (min-width: @screen-xs) {
+			width: 500px;
 			padding-top: 100px;
 			font-size: @fs;
 			line-height: 30/18;
@@ -32,6 +33,14 @@
 			padding-top: 100px;
 			font-size: @fs;
 			line-height: 30/18;
+		}
+	}
+
+	&__fill-form-text {
+		display: none;
+
+		@media all and (min-width: @screen-xs) {
+			display: inline;
 		}
 	}
 }
@@ -88,7 +97,7 @@
 	background-color: @white;
 	color: @blue;
 
-	@media all and (min-width: @screen-lg) {
+	@media all and (min-width: @screen-xs) {
 		margin-bottom: 51px;
 	}	
 }
@@ -126,6 +135,8 @@
 .form__fields-wrapper {
 	width: 100%;
 	text-align: left;
+	margin-bottom: 16px;
+	
 
 	@media all and (min-width: @screen-lg) {
 		display: inline-block;
@@ -137,9 +148,9 @@
 	}
 }
 
-.form__fields-wrapper--w50 {
-	width: 50%;
-}
+// .form__fields-wrapper--w50 {
+// 	width: 50%;
+// }
 
 .form__fields-wrapper--ta-center {
 	text-align: center;
@@ -207,6 +218,7 @@
 	@media all and (max-width: @screen-xs) {
 		padding-top: 38px;
 		padding-bottom: 36px;
+		font-size: @fs-xxs;
 		line-height: 18/14;
 	}
 
@@ -239,6 +251,7 @@
 	padding-left: 0;
 	font-size: @fs;
 	line-height: 30/18;
+	text-transform: none;
 }
 
 .form__radio + .form__label:before {
@@ -460,8 +473,9 @@
 .submit-btn {
 	width: @width-sm-no-padd;
 	margin-top: 10px;
-	padding: 19px 0; 
+	padding: 17px 0; 
 	font-weight: bold;
+	font-size: @fs;
 	line-height: 30/18;
 	text-transform: uppercase;
 	background-color: @green;
@@ -538,13 +552,14 @@
 .application {
 	.form__wrapper();
 
-	@media all and (min-width: @screen-lg) {
-		margin-bottom: 50px;
+	@media all and (max-width: @screen-xs) {
+		background-color: @gray;	
 	}
 
 	@media all and (min-width: @screen-lg) {
+		margin-bottom: 50px;
 		text-align: left;
-	}
+	}	
 
 	&__fieldset {
 		.form__fieldset();
@@ -637,10 +652,18 @@
 
 	&__label {
 		.form__label();
-
+		
 		&--after-field {
 			.form__label--after-field();
-		}
+		
+			@media all and (max-width: @screen-xs) {
+				margin-top: 8px;	
+			}
+
+			@media all and (min-width: @screen-xs) {
+				text-align: left;
+			}
+		}		
 	}
 
 	&__field {
@@ -659,6 +682,10 @@
 
 .travellers {
 	.form__wrapper();
+
+	@media all and (max-width: @screen-xs) {
+		background-color: @gray;
+	}
 
 	@media all and (min-width: @screen-xs) {
 		font-size: 0;
@@ -763,6 +790,10 @@
 .achieves {
 	.form__wrapper();
 
+	@media all and (max-width: @screen-xs) {
+		background-color: @white;
+	}
+
 	@media all and (min-width: @screen-xs) {
 		font-size: 0;
 	}
@@ -794,6 +825,10 @@
 
 .photos {
 	.form__wrapper();
+
+	@media all and (max-width: @screen-xs) {
+		background-color: @gray;
+	}
 
 	@media all and (min-width: @screen-xs) {
 		font-size: 0;
